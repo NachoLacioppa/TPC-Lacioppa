@@ -1,0 +1,6 @@
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\DOMINIO\bin\Debug\DOMINIO.dll
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\DOMINIO\bin\Debug\DOMINIO.pdb
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\DOMINIO\obj\Debug\DOMINIO.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\DOMINIO\obj\Debug\DOMINIO.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\DOMINIO\obj\Debug\DOMINIO.dll
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\DOMINIO\obj\Debug\DOMINIO.pdb

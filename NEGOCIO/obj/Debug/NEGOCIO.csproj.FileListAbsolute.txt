@@ -1,0 +1,6 @@
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\bin\Debug\NEGOCIO.dll
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\bin\Debug\NEGOCIO.pdb
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.dll
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.pdb
