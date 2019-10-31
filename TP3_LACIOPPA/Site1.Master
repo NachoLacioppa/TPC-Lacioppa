@@ -7,12 +7,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>IL TALLER</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="Scripts/bootstrap.min.js"></script>
-        <script src="Scripts/jquery-3.0.0.min.js"></script>
+
+    <script type="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+    <script type="javascript" src="dist/js/bootstrap.js"></script>
+    <script type="javascript">
+        $(document).ready(function() {
+            $(".dropdown-toggle").dropdown();
+        });
+
+    </script>
+
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder> 
     <nav class="navbar navbar-dark bg-primary">
-  <a class="navbar-brand" href="Index.aspx">
+  <a class="navbar-brand" href="Login.aspx">
       <img src="https://image.flaticon.com/icons/svg/28/28475.svg" alt="Alternate Text"  width="30" height="30" />
       IL TALLER
   </a>

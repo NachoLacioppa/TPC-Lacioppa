@@ -2,14 +2,27 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="row">
 <!-- CLIENTES -->
-    <div class="col-sm-2">
+  <div class="col-sm-2">
     <div class="card" style=" width: 15rem;">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRrN6jk28w41e5Zr8is-Tf0zeha4NMZgW8uKooOSozJVkfmHbqk" class="card-img-top" alt="...">
     <div class="card-body">
     <h5 class="card-title">Clientes</h5>
-    <asp:Button ID="btnCliente" runat="server" Text="IR!" class="btn btn-primary" />
+       
+      <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button">Action</button>
+    <button class="dropdown-item" type="button">Another action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+
     </div>
     </div>
   </div>
@@ -28,14 +41,22 @@
     <div class="card" style=" width: 15rem;">
     <img src="https://image.flaticon.com/icons/png/512/69/69769.png" class="card-img-top" alt="...">
     <div class="card-body">
-    <h5 class="card-title">Repuestos</h5>
+    <h5 class="card-title">Reparaciones</h5>
     <asp:Button ID="btnReparacion" runat="server" Text="IR!" class="btn btn-primary" />
     </div>
     </div>
   </div>
+    <!-- TECNICOS -->
+    <div class="col-sm-2">
+    <div class="card" style=" width: 15rem;">
+    <img src="https://static.thenounproject.com/png/146720-200.png" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">Tecnicos</h5>
+    <asp:Button ID="btnTecnicos" runat="server" Text="IR!" class="btn btn-primary" />
+    </div>
+    </div>
+  </div>
+</div>
 </div>
 
- 
-
-   
 </asp:Content>
