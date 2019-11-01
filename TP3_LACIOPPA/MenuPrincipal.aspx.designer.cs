@@ -15,30 +15,12 @@ namespace TP3_LACIOPPA
     {
 
         /// <summary>
-        /// Control btnRepuestos.
+        /// Control DropDownList3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRepuestos;
-
-        /// <summary>
-        /// Control btnReparacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReparacion;
-
-        /// <summary>
-        /// Control btnTecnicos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTecnicos;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
     }
 }
