@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="AltaCliente.aspx" />
     <Content Include="BusquedaCliente.aspx" />
     <Content Include="Site1.Master" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
@@ -137,6 +138,13 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaCliente.aspx.cs">
+      <DependentUpon>AltaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaCliente.aspx.designer.cs">
+      <DependentUpon>AltaCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BusquedaCliente.aspx.cs">
       <DependentUpon>BusquedaCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

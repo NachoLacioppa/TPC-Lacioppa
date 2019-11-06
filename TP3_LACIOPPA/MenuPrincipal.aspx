@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <h2>MENU PRINCIPAL</h2>
+    <br />
     <div class="row">
 <!-- CLIENTES -->
         <div class="col-sm-2">
@@ -16,7 +17,7 @@
   </button>
         <div class="collapse multi-collapse" id="multiCollapseExample1">
       
-         <li><a href="#">Agregar Cliente</a></li>
+         <li><a href="AltaCliente.aspx">Agregar Cliente</a></li>
      <li>  <a href="#">Eliminar Cliente</a></li>
      <li> <a href="#">Modificar Cliente</a></li>
      <li>  <a href="BusquedaCliente.aspx">Buscar Cliente</a></li>
