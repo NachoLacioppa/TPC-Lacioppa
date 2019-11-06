@@ -19,7 +19,7 @@
       <p>Mail</p>
       <asp:TextBox ID="txtMail" runat="server" class="form-control" type="text" Width="300px"></asp:TextBox>
       <br />
-      <asp:Button ID="btnAgregarCliente" runat="server" class="btn btn-primary" Text="Cargar Cliente" />
+      <asp:Button ID="btnAgregarCliente" runat="server" class="btn btn-primary" Text="Cargar Cliente" OnClick="btnAgregarCliente_Click" />
   </form>
 
 </asp:Content>

@@ -43,5 +43,21 @@ namespace NEGOCIO
             return lista;
             //datos.cerrarConexion();
         }
+        public bool altaCliente(Clientes aux)
+        {
+
+            AccesoDatos data = new AccesoDatos();
+            data.prepareStatement("" +
+                "INSERT INTO Clientes VALUES ('" + aux.nombre + "', '" + aux.apellido + "', '" + aux.dni + "', '" + aux.direccion + "', '" + aux.localidad + "', '" + aux.telefono + "', '" + aux.mail + "', 1)");
+            data.ejecutarAccion();
+            data.cerrarConexion();
+
+            if (data.getAffectedRows() <= 0)
+            {
+                return false;
+            }
+            else return true;
+        }
+
     }
 }
