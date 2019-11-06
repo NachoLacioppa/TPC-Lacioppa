@@ -5,7 +5,7 @@
 
     <div class="row">
 <!-- CLIENTES -->
-
+        <div class="col-sm-2">
     <div class="card" style=" width: 15rem;">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRrN6jk28w41e5Zr8is-Tf0zeha4NMZgW8uKooOSozJVkfmHbqk" class="card-img-top" alt="...">
     <div class="card-body">
@@ -15,26 +15,19 @@
     Menu
   </button>
         <div class="collapse multi-collapse" id="multiCollapseExample1">
-      <div class="card card-body">
+      
          <li><a href="#">Agregar Cliente</a></li>
      <li>  <a href="#">Eliminar Cliente</a></li>
      <li> <a href="#">Modificar Cliente</a></li>
      <li>  <a href="BusquedaCliente.aspx">Buscar Cliente</a></li>
-      </div>
+      
     </div>
 
-<%--<div class="collapse" id="collapseExample">
-    <div class="card card-body">
-      <li><a href="#">Agregar Cliente</a></li>
-     <li>  <a href="#">Eliminar Cliente</a></li>
-     <li> <a href="#">Modificar Cliente</a></li>
-     <li>  <a href="#">Buscar Cliente</a></li>
-        </div>
-</div>--%>
 
     </div>
     </div>
-  
+
+  </div>
 <!-- REPUESTOS -->
   <div class="col-sm-2">
     <div class="card" style=" width: 15rem;">
@@ -47,22 +40,13 @@
   </button>
 
         <div class="collapse multi-collapse" id="multiCollapseExample2">
-      <div class="card card-body">
+      
          <li><a href="#">Agregar Repuestos</a></li>
      <li>  <a href="#">Eliminar Repuestos</a></li>
      <li> <a href="#">Modificar Repuestos</a></li>
      <li>  <a href="#">Buscar Repuestos</a></li>
       </div>
-    </div>
-
-<%--<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-      <li><a href="#">Agregar Repuestos</a></li>
-     <li>  <a href="#">Eliminar Repuestos</a></li>
-     <li> <a href="#">Modificar Repuestos</a></li>
-     <li>  <a href="#">Buscar Repuestos</a></li>
-  </div>
-</div>--%>
+    
 
     </div>
     </div>
@@ -95,21 +79,13 @@
   </button>
 
         <div class="collapse multi-collapse" id="multiCollapseExample3">
-      <div class="card card-body">
+      
          <li><a href="#">Agregar Tecnico</a></li>
      <li>  <a href="#">Eliminar Tecnico</a></li>
      <li> <a href="#">Modificar Tecnico</a></li>
      <li>  <a href="#">Buscar Tecnicos</a></li>
-      </div>
+      
     </div>
-<%--<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-      <li><a href="#">Agregar Tecnico</a></li>
-     <li>  <a href="#">Eliminar Tecnico</a></li>
-     <li> <a href="#">Modificar Tecnico</a></li>
-     <li>  <a href="#">Buscar Repuestos</a></li>
-  </div>
-</div>--%>
 
     </div>
     </div>
