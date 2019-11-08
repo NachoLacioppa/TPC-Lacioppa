@@ -29,16 +29,18 @@ namespace NEGOCIO
             while (datos.lector.Read())
             {
                 aux = new Clientes();
-                //aux.ID = Convert.ToInt32(datos.getReader()["id"]);
-                aux.nombre = datos.lector["Nombre"].ToString();
-                aux.apellido = datos.lector["Apellido"].ToString();
-                aux.dni = datos.lector["DNI"].ToString();
-                aux.direccion = datos.lector["Direccion"].ToString();
-                aux.localidad = datos.lector["Localidad"].ToString();
-                aux.telefono = datos.lector["Telefono"].ToString();
-                aux.mail = datos.lector["Mail"].ToString();
+               
+                    aux.nombre = datos.lector["Nombre"].ToString();
+                    aux.apellido = datos.lector["Apellido"].ToString();
+                    aux.dni = datos.lector["DNI"].ToString();
+                    aux.direccion = datos.lector["Direccion"].ToString();
+                    aux.localidad = datos.lector["Localidad"].ToString();
+                    aux.telefono = datos.lector["Telefono"].ToString();
+                    aux.mail = datos.lector["Mail"].ToString();
 
-                lista.Add(aux);
+                    lista.Add(aux);
+                
+
             }
             return lista;
             //datos.cerrarConexion();
@@ -58,6 +60,38 @@ namespace NEGOCIO
             }
             else return true;
         }
+        public bool bajaCliente(Clientes aux)
+        {
+            AccesoDatos data = new AccesoDatos();
+            data.prepareStatement("update clientes set estado = 0 where DNI = '" + aux.dni + "'");
+            data.ejecutarAccion();
+            data.cerrarConexion();
 
+            if (data.getAffectedRows() <= 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public Clientes ValidarDNI (string dnicliente)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Clientes cli = new Clientes();
+
+            datos.setearQuery("Select dni, estado from Clientes where dni = @dni");
+            datos.agregarParametro("dni", dnicliente);
+            datos.ejecutarLector();
+            if (datos.lector.Read())
+            {
+                cli.dni = datos.lector.GetString(0);
+                cli.estado = datos.lector.GetBoolean(1);
+            }
+            else
+            {
+                cli = null;
+            }
+            return cli;
+        } 
     }
 }

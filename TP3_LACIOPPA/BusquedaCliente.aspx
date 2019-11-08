@@ -20,6 +20,7 @@
        <% foreach (var item in listaClientes)
             { %>
             <tr>
+             
               <td><% = item.nombre %></td>
               <td> <% = item.apellido %></td>
               <td> <% = item.dni %></td>
@@ -32,5 +33,4 @@
     
     </tbody>
 </table>            
-
 </asp:Content>

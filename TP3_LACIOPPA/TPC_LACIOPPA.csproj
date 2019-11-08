@@ -70,6 +70,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="AltaCliente.aspx" />
+    <Content Include="BajaCliente.aspx" />
     <Content Include="BusquedaCliente.aspx" />
     <Content Include="Site1.Master" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
@@ -144,6 +145,13 @@
     </Compile>
     <Compile Include="AltaCliente.aspx.designer.cs">
       <DependentUpon>AltaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BajaCliente.aspx.cs">
+      <DependentUpon>BajaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BajaCliente.aspx.designer.cs">
+      <DependentUpon>BajaCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="BusquedaCliente.aspx.cs">
       <DependentUpon>BusquedaCliente.aspx</DependentUpon>

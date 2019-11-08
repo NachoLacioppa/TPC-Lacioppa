@@ -6,7 +6,7 @@
     <br />
     <div class="row">
 <!-- CLIENTES -->
-        <div class="col-sm-2">
+        <div class="col-sm-3">
     <div class="card" style=" width: 15rem;">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRrN6jk28w41e5Zr8is-Tf0zeha4NMZgW8uKooOSozJVkfmHbqk" class="card-img-top" alt="...">
     <div class="card-body">
@@ -18,7 +18,7 @@
         <div class="collapse multi-collapse" id="multiCollapseExample1">
       
          <li><a href="AltaCliente.aspx">Agregar Cliente</a></li>
-     <li>  <a href="#">Eliminar Cliente</a></li>
+     <li>  <a href="BajaCliente.aspx">Eliminar Cliente</a></li>
      <li> <a href="#">Modificar Cliente</a></li>
      <li>  <a href="BusquedaCliente.aspx">Buscar Cliente</a></li>
       
@@ -30,7 +30,7 @@
 
   </div>
 <!-- REPUESTOS -->
-  <div class="col-sm-2">
+  <div class="col-sm-3">
     <div class="card" style=" width: 15rem;">
     <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/drawing-tools-1507636-1280063.png" class="card-img-top" alt="...">
     <div class="card-body">
@@ -53,7 +53,7 @@
     </div>
   </div>
     <!-- REPARACION -->
-    <div class="col-sm-2">
+    <div class="col-sm-3">
     <div class="card" style=" width: 15rem;">
     <img src="https://image.flaticon.com/icons/png/512/69/69769.png" class="card-img-top" alt="...">
     <div class="card-body">
@@ -69,7 +69,7 @@
     </div>
   </div>
     <!-- TECNICOS -->
-    <div class="col-sm-2">
+    <div class="col-sm-3">
     <div class="card" style=" width: 15rem;">
     <img src="https://static.thenounproject.com/png/146720-200.png" class="card-img-top" alt="...">
     <div class="card-body">
