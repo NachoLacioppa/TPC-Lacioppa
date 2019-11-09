@@ -41,8 +41,6 @@ namespace TP3_LACIOPPA
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('CLIENTE ELIMINADO!!!');window.location ='BajaCliente.aspx';", true);
                 
             }
-
-
         }
     }
 }

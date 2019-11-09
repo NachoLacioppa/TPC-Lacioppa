@@ -19,7 +19,7 @@
       
          <li><a href="AltaCliente.aspx">Agregar Cliente</a></li>
      <li>  <a href="BajaCliente.aspx">Eliminar Cliente</a></li>
-     <li> <a href="#">Modificar Cliente</a></li>
+     <li> <a href="ModificarCliente.aspx">Modificar Cliente</a></li>
      <li>  <a href="BusquedaCliente.aspx">Buscar Cliente</a></li>
       
     </div>

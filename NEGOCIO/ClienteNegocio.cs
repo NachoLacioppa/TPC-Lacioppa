@@ -20,7 +20,7 @@ namespace NEGOCIO
             //INSTANCIO LA CONECCION A LA BASE
             AccesoDatos datos = new AccesoDatos();
             //TIRO LA QUERY
-            datos.setearQuery("select nombre, apellido, dni, direccion, localidad, telefono, mail from Clientes");
+            datos.setearQuery("select nombre, apellido, dni, direccion, localidad, telefono, mail from Clientes where estado = 1");
             //EJECUTO EL LECTOR
             datos.ejecutarLector();
 
@@ -29,7 +29,7 @@ namespace NEGOCIO
             while (datos.lector.Read())
             {
                 aux = new Clientes();
-               
+
                     aux.nombre = datos.lector["Nombre"].ToString();
                     aux.apellido = datos.lector["Apellido"].ToString();
                     aux.dni = datos.lector["DNI"].ToString();
@@ -40,7 +40,7 @@ namespace NEGOCIO
 
                     lista.Add(aux);
                 
-
+                    
             }
             return lista;
             //datos.cerrarConexion();
@@ -92,6 +92,38 @@ namespace NEGOCIO
                 cli = null;
             }
             return cli;
-        } 
+        }
+        public Clientes BuscarDNI(string aux)
+        {
+            //INSTANCIO LA LISTA
+            List<Clientes> lista = new List<Clientes>();
+            //DECLARO EL OBJETO
+            Clientes cli = new Clientes();
+            //INSTANCIO LA CONECCION A LA BASE
+            AccesoDatos datos = new AccesoDatos();
+            //TIRO LA QUERY
+            datos.setearQuery("select nombre, apellido, dni, direccion, localidad, telefono, mail from Clientes where estado = 1 and dni = '" + aux + "'");
+            //EJECUTO EL LECTOR
+            datos.ejecutarLector();
+
+            //MIENTRAS EL LECTOR LEA, DEVULVE LOS DATOS (DEBE COINSIDIR CON LA QUERY)
+
+            while (datos.lector.Read())
+            {
+               
+
+                cli.nombre = datos.lector["Nombre"].ToString();
+                cli.apellido = datos.lector["Apellido"].ToString();
+                cli.dni = datos.lector["DNI"].ToString();
+                cli.direccion = datos.lector["Direccion"].ToString();
+                cli.localidad = datos.lector["Localidad"].ToString();
+                cli.telefono = datos.lector["Telefono"].ToString();
+                cli.mail = datos.lector["Mail"].ToString();
+
+
+            }
+            return cli;
+            
+        }
     }
 }
