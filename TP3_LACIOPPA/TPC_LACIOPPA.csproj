@@ -69,9 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="AgregarCateogtiasRepuestos.aspx" />
     <Content Include="AltaCliente.aspx" />
+    <Content Include="AltaRepuesto.aspx" />
     <Content Include="BajaCliente.aspx" />
     <Content Include="BusquedaCliente.aspx" />
+    <Content Include="BusquedaRepuestos.aspx" />
     <Content Include="ModificarCliente.aspx" />
     <Content Include="Site1.Master" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
@@ -140,12 +143,26 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarCateogtiasRepuestos.aspx.cs">
+      <DependentUpon>AgregarCateogtiasRepuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarCateogtiasRepuestos.aspx.designer.cs">
+      <DependentUpon>AgregarCateogtiasRepuestos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AltaCliente.aspx.cs">
       <DependentUpon>AltaCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AltaCliente.aspx.designer.cs">
       <DependentUpon>AltaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltaRepuesto.aspx.cs">
+      <DependentUpon>AltaRepuesto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaRepuesto.aspx.designer.cs">
+      <DependentUpon>AltaRepuesto.aspx</DependentUpon>
     </Compile>
     <Compile Include="BajaCliente.aspx.cs">
       <DependentUpon>BajaCliente.aspx</DependentUpon>
@@ -160,6 +177,13 @@
     </Compile>
     <Compile Include="BusquedaCliente.aspx.designer.cs">
       <DependentUpon>BusquedaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaRepuestos.aspx.cs">
+      <DependentUpon>BusquedaRepuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BusquedaRepuestos.aspx.designer.cs">
+      <DependentUpon>BusquedaRepuestos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

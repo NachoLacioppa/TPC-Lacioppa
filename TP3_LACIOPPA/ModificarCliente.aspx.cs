@@ -34,11 +34,38 @@ namespace TP3_LACIOPPA
 
         }
 
-        protected void btnModificarCliente_Click(object sender, EventArgs e)
+        //protected void btnModificarCliente_Click(object sender, EventArgs e)
+        //{
+        //    Clientes cli = new Clientes();
+        //    ClienteNegocio clin = new ClienteNegocio();
+
+        //    cli.nombre = txtnombre.Text;
+        //    cli.apellido = txtApellido.Text;
+        //    cli.dni = txtDNI.Text;
+        //    cli.direccion = txtDireccion.Text;
+        //    cli.localidad = txtLocalidad.Text;
+        //    cli.telefono = txtTelefono.Text;
+        //    cli.mail = txtMail.Text;
+
+        //    clin.ModificarCliente(cli);
+        //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('CLIENTE MODIFICADO');window.location ='MenuPrincipal.aspx';", true);
+        //}
+
+        protected void btnModificarCliente_Click1(object sender, EventArgs e)
         {
+            Clientes cli = new Clientes();
+            ClienteNegocio clin = new ClienteNegocio();
 
+            cli.nombre = txtnombre.Text;
+            cli.apellido = txtApellido.Text;
+            cli.dni = txtDNI.Text;
+            cli.direccion = txtDireccion.Text;
+            cli.localidad = txtLocalidad.Text;
+            cli.telefono = txtTelefono.Text;
+            cli.mail = txtMail.Text;
+
+            clin.ModificarCliente(cli);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('CLIENTE MODIFICADO');window.location ='MenuPrincipal.aspx';", true);
         }
-
-        
     }
 }

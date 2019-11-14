@@ -30,17 +30,17 @@ namespace NEGOCIO
             {
                 aux = new Clientes();
 
-                    aux.nombre = datos.lector["Nombre"].ToString();
-                    aux.apellido = datos.lector["Apellido"].ToString();
-                    aux.dni = datos.lector["DNI"].ToString();
-                    aux.direccion = datos.lector["Direccion"].ToString();
-                    aux.localidad = datos.lector["Localidad"].ToString();
-                    aux.telefono = datos.lector["Telefono"].ToString();
-                    aux.mail = datos.lector["Mail"].ToString();
+                aux.nombre = datos.lector["Nombre"].ToString();
+                aux.apellido = datos.lector["Apellido"].ToString();
+                aux.dni = datos.lector["DNI"].ToString();
+                aux.direccion = datos.lector["Direccion"].ToString();
+                aux.localidad = datos.lector["Localidad"].ToString();
+                aux.telefono = datos.lector["Telefono"].ToString();
+                aux.mail = datos.lector["Mail"].ToString();
 
-                    lista.Add(aux);
-                
-                    
+                lista.Add(aux);
+
+
             }
             return lista;
             //datos.cerrarConexion();
@@ -74,7 +74,7 @@ namespace NEGOCIO
             return true;
         }
 
-        public Clientes ValidarDNI (string dnicliente)
+        public Clientes ValidarDNI(string dnicliente)
         {
             AccesoDatos datos = new AccesoDatos();
             Clientes cli = new Clientes();
@@ -110,7 +110,7 @@ namespace NEGOCIO
 
             while (datos.lector.Read())
             {
-               
+
 
                 cli.nombre = datos.lector["Nombre"].ToString();
                 cli.apellido = datos.lector["Apellido"].ToString();
@@ -123,7 +123,28 @@ namespace NEGOCIO
 
             }
             return cli;
-            
+
+        }
+
+        public bool ModificarCliente(Clientes aux)
+        {
+            AccesoDatos data = new AccesoDatos();
+            data.prepareStatement("update clientes set nombre = @nombre, apellido = @apellido, dni = @dni, direccion = @direccion, localidad = @localidad, telefono = @telefono, mail = @mail where dni = '" + aux.dni + "'");
+            data.agregarParametro("@nombre",aux.nombre);
+            data.agregarParametro("@apellido",aux.apellido);
+            data.agregarParametro("@dni",aux.dni);
+            data.agregarParametro("@direccion",aux.direccion);
+            data.agregarParametro("@localidad",aux.localidad);
+            data.agregarParametro("@telefono",aux.telefono);
+            data.agregarParametro("@mail",aux.mail);
+            data.ejecutarAccion();
+            data.cerrarConexion();
+
+            if (data.getAffectedRows() <= 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

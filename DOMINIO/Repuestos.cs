@@ -9,6 +9,8 @@ namespace DOMINIO
     public class Repuestos
     {
         public int id { get; set; }
+        public long codigo { get; set; }
+        public string nombre { get; set; }
         public int cantidad { get; set; }
         public float precio { get; set; }
         public CategoriaRepuestos categoria { get; set; }

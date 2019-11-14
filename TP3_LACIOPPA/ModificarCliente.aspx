@@ -26,7 +26,7 @@
       <p>Mail</p>
       <asp:TextBox ID="txtMail" runat="server" class="form-control" type="text" Width="300px"></asp:TextBox>
       <br />
-      <asp:Button ID="btnModificarCliente" runat="server" Text="Modificar" class="btn btn-warning"/>
+      <asp:Button ID="btnModificarCliente" runat="server" Text="Modificar" class="btn btn-warning" OnClick="btnModificarCliente_Click1"/>
     </form>
 
 </asp:Content>

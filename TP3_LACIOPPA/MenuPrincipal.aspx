@@ -20,7 +20,7 @@
          <li><a href="AltaCliente.aspx">Agregar Cliente</a></li>
      <li>  <a href="BajaCliente.aspx">Eliminar Cliente</a></li>
      <li> <a href="ModificarCliente.aspx">Modificar Cliente</a></li>
-     <li>  <a href="BusquedaCliente.aspx">Buscar Cliente</a></li>
+     <li>  <a href="BusquedaCliente.aspx">Listar Clientes</a></li>
       
     </div>
 
@@ -42,10 +42,12 @@
 
         <div class="collapse multi-collapse" id="multiCollapseExample2">
       
-         <li><a href="#">Agregar Repuestos</a></li>
+     <li><a href="AltaRepuesto.aspx">Nuevo Repuesto</a></li>
      <li>  <a href="#">Eliminar Repuestos</a></li>
-     <li> <a href="#">Modificar Repuestos</a></li>
-     <li>  <a href="#">Buscar Repuestos</a></li>
+     <li> <a href="#">Agregar Stock Repuestos</a></li>
+     <li>  <a href="BusquedaRepuestos.aspx">Listar Repuestos</a></li>
+     <li>  <a href="#">Modificar Repuestos</a></li>
+     <li>  <a href="AgregarCateogtiasRepuestos.aspx">Categorias</a></li>
       </div>
     
 
