@@ -10,7 +10,7 @@
                 <th scope="col">NOMBRE</th>
                 <th scope="col">CANTIDAD DISPONIBLE</th>
                 <th scope="col">PRECIO</th>
-                <%--<th scope="col">CATEGORIA</th>--%>
+                <th scope="col">CATEGORIA</th>
                 
             </tr>
         </thead>
@@ -24,7 +24,7 @@
               <td> <% = item.nombre %></td>
               <td> <% = item.cantidad %></td>
               <td> <% = item.precio %></td>
-              <%--<td> <% = item.categoria%></td>--%>
+              <td> <% = item.categoria.nombre%></td>
               
             </tr>
         <% } %>

@@ -19,7 +19,7 @@ namespace NEGOCIO
             //INSTANCIO LA CONECCION A LA BASE
             AccesoDatos datos = new AccesoDatos();
             //TIRO LA QUERY
-            datos.setearQuery("select nombre from CATEGORIAS_REPUESTOS where estado = 1");
+            datos.setearQuery("select nombre, id from CATEGORIAS_REPUESTOS where estado = 1");
             //EJECUTO EL LECTOR
             datos.ejecutarLector();
 
@@ -29,7 +29,9 @@ namespace NEGOCIO
             {
                 aux = new CategoriaRepuestos();
 
+                aux.id = Convert.ToInt32(datos.lector["id"]);
                 aux.nombre = datos.lector["Nombre"].ToString();
+                
 
                 lista.Add(aux);
 
