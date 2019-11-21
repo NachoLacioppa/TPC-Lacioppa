@@ -29,12 +29,12 @@ namespace TP3_LACIOPPA
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO EXISTE UN CLIENTE CON ESE DNI');window.location ='BajaCliente.aspx';", true);
             }
-            //existe y actualiza estado a cero
+            //ya esta eliminado
             if (dni.estado == false)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('CLIENTE YA ELIMINADO');window.location ='BajaCliente.aspx';", true);
             }
-            //ya esta eliminado
+            //existe y actualiza estado a cero
             if (dni.estado == true)
             {
                 clin.bajaCliente(dni);

@@ -35,7 +35,7 @@ namespace TP3_LACIOPPA
             Repuestos re = new Repuestos();
             RepuestosNegocio ren = new RepuestosNegocio();
 
-            re.codigo = Convert.ToInt64(txtCodigo.Text);
+            re.codigo = txtCodigo.Text;
             re.nombre = txtnombre.Text;
             re.precio = Convert.ToSingle(txtPrecio.Text);
             re.cantidad = Convert.ToInt32(txtCantidad.Text);

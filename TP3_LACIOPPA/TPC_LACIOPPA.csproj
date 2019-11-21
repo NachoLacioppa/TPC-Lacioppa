@@ -70,12 +70,15 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="AgregarCateogtiasRepuestos.aspx" />
+    <Content Include="AgregarStockRepuesto.aspx" />
     <Content Include="AltaCliente.aspx" />
     <Content Include="AltaRepuesto.aspx" />
     <Content Include="BajaCliente.aspx" />
+    <Content Include="BajaRepuestos.aspx" />
     <Content Include="BusquedaCliente.aspx" />
     <Content Include="BusquedaRepuestos.aspx" />
     <Content Include="ModificarCliente.aspx" />
+    <Content Include="ModificarRepuestos.aspx" />
     <Content Include="Site1.Master" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
@@ -150,6 +153,13 @@
     <Compile Include="AgregarCateogtiasRepuestos.aspx.designer.cs">
       <DependentUpon>AgregarCateogtiasRepuestos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AgregarStockRepuesto.aspx.cs">
+      <DependentUpon>AgregarStockRepuesto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarStockRepuesto.aspx.designer.cs">
+      <DependentUpon>AgregarStockRepuesto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AltaCliente.aspx.cs">
       <DependentUpon>AltaCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -170,6 +180,13 @@
     </Compile>
     <Compile Include="BajaCliente.aspx.designer.cs">
       <DependentUpon>BajaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BajaRepuestos.aspx.cs">
+      <DependentUpon>BajaRepuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BajaRepuestos.aspx.designer.cs">
+      <DependentUpon>BajaRepuestos.aspx</DependentUpon>
     </Compile>
     <Compile Include="BusquedaCliente.aspx.cs">
       <DependentUpon>BusquedaCliente.aspx</DependentUpon>
@@ -208,6 +225,13 @@
     </Compile>
     <Compile Include="ModificarCliente.aspx.designer.cs">
       <DependentUpon>ModificarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarRepuestos.aspx.cs">
+      <DependentUpon>ModificarRepuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarRepuestos.aspx.designer.cs">
+      <DependentUpon>ModificarRepuestos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
