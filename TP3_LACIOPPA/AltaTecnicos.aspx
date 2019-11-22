@@ -8,7 +8,9 @@
       <p>USUARIO</p>
       <asp:TextBox ID="txtUSER" runat="server" class="form-control" type="text" Width="200px"></asp:TextBox>
       <p>CONTRASEÑA</p>
-      <asp:TextBox ID="txtPASS" runat="server" class="form-control" type="text" Width="200px"></asp:TextBox>
+      <asp:TextBox ID="txtPASS" runat="server" class="form-control" type="text" Width="200px" TextMode="Password"></asp:TextBox>
+      <p>PERFIL</p>
+      <asp:DropDownList ID="dwPerfil" runat="server"></asp:DropDownList>
       <br />
       <br />
       <h3>DATOS PERSONALES DEL TECNICO</h3>
@@ -21,6 +23,6 @@
       <p>Sueldo</p>
       <asp:TextBox ID="txtsueldo" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
       <br />
-      <asp:Button ID="btnAgregarTecnico" runat="server" class="btn btn-primary" Text="Cargar Tecnico"  />
+      <asp:Button ID="btnAgregarTecnico" runat="server" class="btn btn-primary" Text="Cargar Tecnico" OnClick="btnAgregarTecnico_Click"  />
   </form>
 </asp:Content>

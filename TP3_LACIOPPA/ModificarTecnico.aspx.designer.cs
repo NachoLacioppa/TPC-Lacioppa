@@ -11,35 +11,35 @@ namespace TP3_LACIOPPA
 {
 
 
-    public partial class AltaTecnicos
+    public partial class ModificarTecnico
     {
 
         /// <summary>
-        /// Control txtUSER.
+        /// Control txtBuscarUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUSER;
+        protected global::System.Web.UI.WebControls.TextBox txtBuscarUsuario;
 
         /// <summary>
-        /// Control txtPASS.
+        /// Control btnBuscarTecn.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPASS;
+        protected global::System.Web.UI.WebControls.Button btnBuscarTecn;
 
         /// <summary>
-        /// Control dwPerfil.
+        /// Control txtusuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dwPerfil;
+        protected global::System.Web.UI.WebControls.TextBox txtusuario;
 
         /// <summary>
         /// Control txtnombre.
@@ -51,13 +51,13 @@ namespace TP3_LACIOPPA
         protected global::System.Web.UI.WebControls.TextBox txtnombre;
 
         /// <summary>
-        /// Control txtapellido.
+        /// Control txtApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtapellido;
+        protected global::System.Web.UI.WebControls.TextBox txtApellido;
 
         /// <summary>
         /// Control txtDNI.
@@ -78,12 +78,21 @@ namespace TP3_LACIOPPA
         protected global::System.Web.UI.WebControls.TextBox txtsueldo;
 
         /// <summary>
-        /// Control btnAgregarTecnico.
+        /// Control dwPerfil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregarTecnico;
+        protected global::System.Web.UI.WebControls.DropDownList dwPerfil;
+
+        /// <summary>
+        /// Control btnModificarCliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnModificarCliente;
     }
 }
