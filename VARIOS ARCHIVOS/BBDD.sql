@@ -67,4 +67,4 @@ CREATE TABLE ESTADOS_REPARACION(
 
 
 -----------QUERYS-----------
-
+use LACIOPPA_DB

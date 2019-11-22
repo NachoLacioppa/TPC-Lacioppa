@@ -83,10 +83,11 @@
 
         <div class="collapse multi-collapse" id="multiCollapseExample3">
       
-         <li><a href="#">Agregar Tecnico</a></li>
+         <li><a href="AltaTecnicos.aspx">Agregar Tecnico</a></li>
      <li>  <a href="#">Eliminar Tecnico</a></li>
      <li> <a href="#">Modificar Tecnico</a></li>
-     <li>  <a href="#">Buscar Tecnicos</a></li>
+     <li>  <a href="BusquedaTecnicos.aspx">Listar Tecnicos</a></li>
+     <li>  <a href="AgregarPerfilesTecnicos.aspx">PERFILES</a></li>
       
     </div>
 

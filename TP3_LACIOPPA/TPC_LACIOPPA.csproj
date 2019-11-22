@@ -70,13 +70,16 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="AgregarCateogtiasRepuestos.aspx" />
+    <Content Include="AgregarPerfilesTecnicos.aspx" />
     <Content Include="AgregarStockRepuesto.aspx" />
     <Content Include="AltaCliente.aspx" />
     <Content Include="AltaRepuesto.aspx" />
+    <Content Include="AltaTecnicos.aspx" />
     <Content Include="BajaCliente.aspx" />
     <Content Include="BajaRepuestos.aspx" />
     <Content Include="BusquedaCliente.aspx" />
     <Content Include="BusquedaRepuestos.aspx" />
+    <Content Include="BusquedaTecnicos.aspx" />
     <Content Include="ModificarCliente.aspx" />
     <Content Include="ModificarRepuestos.aspx" />
     <Content Include="Site1.Master" />
@@ -153,6 +156,13 @@
     <Compile Include="AgregarCateogtiasRepuestos.aspx.designer.cs">
       <DependentUpon>AgregarCateogtiasRepuestos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AgregarPerfilesTecnicos.aspx.cs">
+      <DependentUpon>AgregarPerfilesTecnicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarPerfilesTecnicos.aspx.designer.cs">
+      <DependentUpon>AgregarPerfilesTecnicos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgregarStockRepuesto.aspx.cs">
       <DependentUpon>AgregarStockRepuesto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -173,6 +183,13 @@
     </Compile>
     <Compile Include="AltaRepuesto.aspx.designer.cs">
       <DependentUpon>AltaRepuesto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltaTecnicos.aspx.cs">
+      <DependentUpon>AltaTecnicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaTecnicos.aspx.designer.cs">
+      <DependentUpon>AltaTecnicos.aspx</DependentUpon>
     </Compile>
     <Compile Include="BajaCliente.aspx.cs">
       <DependentUpon>BajaCliente.aspx</DependentUpon>
@@ -201,6 +218,13 @@
     </Compile>
     <Compile Include="BusquedaRepuestos.aspx.designer.cs">
       <DependentUpon>BusquedaRepuestos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaTecnicos.aspx.cs">
+      <DependentUpon>BusquedaTecnicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BusquedaTecnicos.aspx.designer.cs">
+      <DependentUpon>BusquedaTecnicos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
