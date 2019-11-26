@@ -44,7 +44,7 @@
       
      <li><a href="AltaRepuesto.aspx">Nuevo Repuesto</a></li>
      <li>  <a href="BajaRepuestos.aspx">Eliminar Repuestos</a></li>
-     <li> <a href="#">Agregar Stock Repuestos</a></li>
+     <li> <a href="StockRepuestos.aspx">Agregar Stock Repuestos</a></li>
      <li>  <a href="BusquedaRepuestos.aspx">Listar Repuestos</a></li>
      <li>  <a href="ModificarRepuestos.aspx">Modificar Repuestos</a></li>
      <li>  <a href="AgregarCateogtiasRepuestos.aspx">Categorias</a></li>
@@ -61,11 +61,17 @@
     <div class="card-body">
     <h5 class="card-title">Reparaciones</h5>
 
-    <asp:DropDownList class="btn btn-secondary dropdown-toggle" ID="DropDownList3" runat="server">
-            <asp:ListItem Text="One" Value=1 />
-            <asp:ListItem Text="Two" Value=2 />
-            <asp:ListItem Text="Three" Value=3 />
-        </asp:DropDownList>
+     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample2">
+    Menu
+  </button>
+
+        <div class="collapse multi-collapse" id="multiCollapseExample4">
+      
+     <li><a href="NuevaReparacion.aspx">Nueva Reparacion</a></li>
+     <li>  <a href="#">Finalizar Reparacion</a></li>
+     <li> <a href="#">Listar Reparaciones</a></li>
+ 
+      </div>
 
     </div>
     </div>

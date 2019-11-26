@@ -152,7 +152,32 @@ namespace NEGOCIO
             }
             return true;
         }
+        public List<Repuestos> listarRepuestoStock(string aux)
+        {
+            //INSTANCIO LA LISTA
+            List<Repuestos> lista = new List<Repuestos>();
+            //DECLARO EL OBJETO
+            Repuestos re = new Repuestos();
+            //INSTANCIO LA CONECCION A LA BASE
+            AccesoDatos datos = new AccesoDatos();
+            //TIRO LA QUERY
+            datos.setearQuery("select CODIGO, NOMBRE, CANTIDAD from Repuestos where estado = 1 and codigo = '" + aux + "'");
+            //EJECUTO EL LECTOR
+            datos.ejecutarLector();
 
+            //MIENTRAS EL LECTOR LEA, DEVULVE LOS DATOS (DEBE COINSIDIR CON LA QUERY)
+
+            while (datos.lector.Read())
+            {
+                re.codigo = datos.lector["Codigo"].ToString();
+                re.nombre = datos.lector["Nombre"].ToString();
+                re.cantidad = Convert.ToInt32(datos.lector["Cantidad"].ToString());
+
+                lista.Add(re);
+
+            }
+            return lista;
+        }
 
     }
 }

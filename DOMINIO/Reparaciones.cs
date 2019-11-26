@@ -15,7 +15,7 @@ namespace DOMINIO
         public string informeTEC { get; set; }
         public string informeCLI { get; set; }
         public float presupuesto { get; set; }
-        public int estados { get; set; }
+        public EstadosReparacion estados { get; set; }
 
     }
 }
