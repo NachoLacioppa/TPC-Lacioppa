@@ -138,12 +138,12 @@ namespace NEGOCIO
         {
             AccesoDatos data = new AccesoDatos();
             data.prepareStatement("update TECNICOS set usuario = @usuario, nombre = @nombre, apellido = @apellido, dni = @dni, sueldo = @sueldo, idperfil = @idperfil where dni = '" + aux.dni + "'");
-            data.agregarParametro("@usuario",aux.usuario);
-            data.agregarParametro("@nombre",aux.nombre);
-            data.agregarParametro("@apellido",aux.apellido);
-            data.agregarParametro("@dni",aux.dni);
-            data.agregarParametro("@sueldo",aux.sueldo);
-            data.agregarParametro("@idperfil",aux.perfil.id);
+            data.agregarParametro("@usuario", aux.usuario);
+            data.agregarParametro("@nombre", aux.nombre);
+            data.agregarParametro("@apellido", aux.apellido);
+            data.agregarParametro("@dni", aux.dni);
+            data.agregarParametro("@sueldo", aux.sueldo);
+            data.agregarParametro("@idperfil", aux.perfil.id);
 
             data.ejecutarAccion();
             data.cerrarConexion();
@@ -154,6 +154,32 @@ namespace NEGOCIO
             }
             return true;
         }
+        public List<Tecnicos> listarUsers()
+        {
+            //INSTANCIO LA LISTA
+            List<Tecnicos> lista = new List<Tecnicos>();
+            //DECLARO EL OBJETO
+            Tecnicos aux;
+            //INSTANCIO LA CONECCION A LA BASE
+            AccesoDatos datos = new AccesoDatos();
+            //TIRO LA QUERY
+            //datos.setearQuery("select codigo, nombre, cantidad, precio from repuestos where estado = 1");
+            datos.setearQuery("select ID , USUARIO from TECNICOS where ESTADO = 1");
+            //EJECUTO EL LECTOR
+            datos.ejecutarLector();
 
+            //MIENTRAS EL LECTOR LEA, DEVULVE LOS DATOS (DEBE COINSIDIR CON LA QUERY)
+
+            while (datos.lector.Read())
+            {
+                aux = new Tecnicos();
+
+                aux.usuario = datos.lector["Usuario"].ToString();
+                aux.ID = Convert.ToInt32(datos.lector["ID"]);
+
+                lista.Add(aux);
+            }
+            return lista;
+        }
     }
 }

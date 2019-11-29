@@ -9,8 +9,8 @@ namespace DOMINIO
     public class Equipos
     {
         public int id { get; set; }
-        public int numeroserie { get; set; }
-        public string nombre { get; set; }
+        public string numeroserie { get; set; }
+        public string modelo { get; set; }
         public string marca { get; set; }
     }
 }

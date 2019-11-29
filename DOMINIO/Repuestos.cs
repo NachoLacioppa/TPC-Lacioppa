@@ -15,8 +15,7 @@ namespace DOMINIO
         public float precio { get; set; }
         public CategoriaRepuestos categoria { get; set; }
         public bool estado { get; set; }
-        public DateTime fecha_entrada { get; set; }
-        public DateTime fecha_salida { get; set; }
+     
 
     }
 }

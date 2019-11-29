@@ -5,18 +5,26 @@
     <h2>NUEVA REPARACION</h2>
     <br />
     <p>Numero de orden</p>
-    <asp:TextBox ID="txtOrden" runat="server" class="form-control" Width="150px" TextMode="Number"></asp:TextBox>
-    <p>Cliente (Buscar por DNI)</p>
+    <asp:TextBox ID="txtOrden" runat="server" class="form-control" Width="150px" TextMode="Number" Enabled="False"></asp:TextBox>
+    <div class="form-row">
+        <p>Cliente (Buscar por DNI)</p>
     <asp:TextBox ID="txtCliente" runat="server" class="form-control" placeholder="DNI" Width="150px"></asp:TextBox>
-    <asp:Button ID="btnBuscarCliente" runat="server" Text="Buscar Cliente" class="btn btn-primary" CssClass="position-relative" />
-    <asp:GridView ID="dgvDatosCliente" runat="server"></asp:GridView>
+    <asp:Button ID="btnBuscarCliente" runat="server" Text="Buscar Cliente" class="btn btn-primary" OnClick="btnBuscarCliente_Click" />
+        <asp:TextBox ID="txtNombre" runat="server" class="form-control" placeholder="Nombre" Width="150px" Height="23px" Enabled="False"></asp:TextBox>
+        <asp:TextBox ID="txtApellido" runat="server" class="form-control" placeholder="Apellido" Width="150px" Height="23px" Enabled="False"></asp:TextBox>
+        <asp:TextBox ID="txtTelefono" runat="server" class="form-control" placeholder="Telefono" Width="150px" Height="23px" Enabled="False"></asp:TextBox>
+    </div>
+    
     <br />
     <br />
+    
     <p>Equipo</p>
     <asp:TextBox ID="txtNumeroSerie" runat="server" class="form-control" placeholder="Numero de Serie" Width="250px"></asp:TextBox>
-    <asp:Button ID="btnBuscarEquipo" runat="server" Text="Buscar Equipo" class="btn btn-primary" />
+    <asp:Button ID="btnBuscarEquipo" runat="server" Text="Buscar Equipo" class="btn btn-primary" OnClick="btnBuscarEquipo_Click" />
     <asp:TextBox ID="txtMarca" runat="server" class="form-control" placeholder="Marca" Width="250px"></asp:TextBox>
     <asp:TextBox ID="txtModelo" runat="server" class="form-control" placeholder="Modelo" Width="250px"></asp:TextBox>
+    
+    
     <br />
     <br />
     <p>Problema</p>
@@ -25,6 +33,6 @@
     <p>Tecnico asignado</p>
     <asp:DropDownList ID="dwTecnico" runat="server"></asp:DropDownList>
     <br />
-    <asp:Button ID="btnCargarReparacion" runat="server" Text="Buscar Equipo" class="btn btn-primary" />
+    <asp:Button ID="btnCargarReparacion" runat="server" Text="Carga Reparacion" class="btn btn-primary" OnClick="btnCargarReparacion_Click" />
 
 </asp:Content>
