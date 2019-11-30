@@ -17,6 +17,10 @@ namespace TP3_LACIOPPA
             ReparacionesNegocio repn = new ReparacionesNegocio();
             txtOrden.Text = repn.BuscarOrden().ToString();
 
+            Equipos eq = new Equipos();
+            EquipoNegocio eqn = new EquipoNegocio();
+            txtidequipo.Text = eqn.BuscarIDEquipo().ToString();
+
             if (!IsPostBack)
             {
                 TecnicoNegocio negocio = new TecnicoNegocio();
@@ -34,7 +38,7 @@ namespace TP3_LACIOPPA
             ClienteNegocio clin = new ClienteNegocio();
 
             cli = clin.BuscarDNI(txtCliente.Text);
-
+            txtidcliente.Text = cli.id.ToString();
             txtNombre.Text = cli.nombre;
             txtApellido.Text = cli.apellido;
             txtTelefono.Text = cli.telefono;
@@ -46,7 +50,7 @@ namespace TP3_LACIOPPA
             EquipoNegocio eqn = new EquipoNegocio();
 
             eq = eqn.BuscarCodigo(txtNumeroSerie.Text);
-
+            txtidequipo.Text = Convert.ToInt32(eq.id).ToString();
             txtMarca.Text = eq.marca;
             txtModelo.Text = eq.modelo;
         }
@@ -63,35 +67,38 @@ namespace TP3_LACIOPPA
                 EquipoNegocio eqn = new EquipoNegocio();
 
                 re.orden = Convert.ToInt64(txtOrden.Text);
+
                 re.cliente = new Clientes();
+                re.cliente.id = Convert.ToInt32(txtidcliente.Text);
                 re.cliente.dni = txtCliente.Text;
 
-                re.equipo = new Equipos();
-                re.equipo.numeroserie = txtNumeroSerie.Text;
                 sn = eqn.ValidarSN(txtNumeroSerie.Text);
                 if (sn == null)
                 {
+                    //CUANDO CARGA EL NUEVO EQUIPO EN RE.EQUIPO.ID LO CARGA CON 0
+                    
                     eq.numeroserie = txtNumeroSerie.Text;
                     eq.marca = txtMarca.Text;
                     eq.modelo = txtModelo.Text;
 
-                    re.problema = txtProblema.Text;
-                    re.tecnico = new Tecnicos();
-                    re.tecnico.ID = Convert.ToInt32(dwTecnico.SelectedItem.Value);
+                    eqn.altaEquipo(sn);
 
-                    eqn.altaEquipo(eq);
-                    ren.NuevaReparacion(re);
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NUEVA REPARACION CONFIRMADA');window.location = 'MenuPrincipal.aspx';", true);
                 }
 
+                //PERO SI sn NO ES NULL LLEGA ACA LO CARGA BIEN
+                re.equipo = new Equipos();
+                re.equipo.id = Convert.ToInt32(txtidequipo.Text);
+                re.equipo.numeroserie = txtNumeroSerie.Text;
+                re.equipo.marca = txtMarca.Text;
+                re.equipo.modelo = txtModelo.Text;
+
                 re.problema = txtProblema.Text;
+
                 re.tecnico = new Tecnicos();
                 re.tecnico.ID = Convert.ToInt32(dwTecnico.SelectedItem.Value);
 
                 ren.NuevaReparacion(re);
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NUEVA REPARACION CONFIRMADA');window.location = 'MenuPrincipal.aspx';", true);
-                    
-               
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NUEVA REPARACION CONFIRMADA');window.location = 'MenuPrincipal.aspx';", true);              
             }
 
             catch (Exception ex)

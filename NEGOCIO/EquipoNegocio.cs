@@ -18,7 +18,8 @@ namespace NEGOCIO
             //INSTANCIO LA CONECCION A LA BASE
             AccesoDatos datos = new AccesoDatos();
             //TIRO LA QUERY
-            datos.setearQuery("SELECT MARCA, MODELO FROM EQUIPOS WHERE NUMEROSERIE = " + "'" + aux + "'");
+            datos.setearQuery("SELECT ID, MARCA, MODELO FROM EQUIPOS WHERE NUMEROSERIE = @sn");
+            datos.agregarParametro("sn", aux);
             //EJECUTO EL LECTOR
             datos.ejecutarLector();
 
@@ -26,6 +27,7 @@ namespace NEGOCIO
 
             while (datos.lector.Read())
             {
+                eq.id = Convert.ToInt32(datos.lector["ID"]);
                 eq.marca = datos.lector["MARCA"].ToString();
                 eq.modelo = datos.lector["MODELO"].ToString();
             }
@@ -36,7 +38,7 @@ namespace NEGOCIO
             AccesoDatos data = new AccesoDatos();
             try
             {
-                data.prepareStatement("insert into equipos values (numeroserie = @numeroserie , marca = @marca , modelo = @modelo)");
+                data.prepareStatement("insert into equipos values (@numeroserie , @marca , @modelo)");
                 data.agregarParametro("@numeroserie", aux.numeroserie);
                 data.agregarParametro("@marca", aux.marca);
                 data.agregarParametro("@modelo", aux.modelo);
@@ -64,12 +66,13 @@ namespace NEGOCIO
             AccesoDatos datos = new AccesoDatos();
             Equipos eq = new Equipos();
 
-            datos.setearQuery("select numeroserie from equipos where NUMEROSERIE = @NUMEROSERIE");
+            datos.setearQuery("select id, numeroserie from equipos where NUMEROSERIE = @NUMEROSERIE");
             datos.agregarParametro("NUMEROSERIE", sn);
             datos.ejecutarLector();
             if (datos.lector.Read())
             {
-                eq.numeroserie = datos.lector.GetString(0);
+                eq.id = datos.lector.GetInt32(0);
+                eq.numeroserie = datos.lector.GetString(1);
             }
             else
             {
@@ -77,5 +80,31 @@ namespace NEGOCIO
             }
             return eq;
         }
+        public int BuscarIDEquipo()
+        {
+            AccesoDatos datos = new AccesoDatos();
+            int orden = 0;
+            try
+            {
+                //datos.setearQuery("SELECT TOP 1 ORDEN FROM REPARACIONES ORDER BY ORDEN DESC");
+                datos.setearQuery("SELECT TOP 1 ID FROM EQUIPOS ORDER BY ID DESC");
+                datos.ejecutarLector();
+                while (datos.lector.Read())
+                {
+                    orden = datos.lector.GetInt32(0);
+                }
+                return orden + 1;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
     }
 }

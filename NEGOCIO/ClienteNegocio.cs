@@ -79,13 +79,14 @@ namespace NEGOCIO
             AccesoDatos datos = new AccesoDatos();
             Clientes cli = new Clientes();
 
-            datos.setearQuery("Select dni, estado from Clientes where dni = @dni");
+            datos.setearQuery("Select id, dni, estado from Clientes where dni = @dni");
             datos.agregarParametro("dni", dnicliente);
             datos.ejecutarLector();
             if (datos.lector.Read())
             {
-                cli.dni = datos.lector.GetString(0);
-                cli.estado = datos.lector.GetBoolean(1);
+                cli.id = datos.lector.GetInt32(0);
+                cli.dni = datos.lector.GetString(1);
+                cli.estado = datos.lector.GetBoolean(2);
             }
             else
             {
@@ -102,7 +103,7 @@ namespace NEGOCIO
             //INSTANCIO LA CONECCION A LA BASE
             AccesoDatos datos = new AccesoDatos();
             //TIRO LA QUERY
-            datos.setearQuery("select nombre, apellido, dni, direccion, localidad, telefono, mail from Clientes where estado = 1 and dni = '" + aux + "'");
+            datos.setearQuery("select id, nombre, apellido, dni, direccion, localidad, telefono, mail from Clientes where estado = 1 and dni = '" + aux + "'");
             //EJECUTO EL LECTOR
             datos.ejecutarLector();
 
@@ -111,7 +112,7 @@ namespace NEGOCIO
             while (datos.lector.Read())
             {
 
-
+                cli.id = Convert.ToInt32(datos.lector["id"]);
                 cli.nombre = datos.lector["Nombre"].ToString();
                 cli.apellido = datos.lector["Apellido"].ToString();
                 cli.dni = datos.lector["DNI"].ToString();

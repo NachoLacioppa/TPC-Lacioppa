@@ -13,7 +13,7 @@ namespace TP3_LACIOPPA
 {
     public partial class AltaRepuesto : System.Web.UI.Page
     {
-        private List<CategoriaRepuestos> Lista;
+        //private List<CategoriaRepuestos> Lista;
         protected void Page_Load(object sender, EventArgs e)
         {
 

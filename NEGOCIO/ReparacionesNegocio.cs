@@ -40,13 +40,14 @@ namespace NEGOCIO
             AccesoDatos data = new AccesoDatos();
             try
             {
-                
+
                 data.prepareStatement("insert into REPARACIONES values (@orden, @idcliente, @idequipo, @idtecnico, 1, @problema, @fecha_entrada , null, null, null)");
                 data.agregarParametro("@orden", aux.orden);
-                data.agregarParametro("@idcliente", aux.cliente.dni);
-                data.agregarParametro("@idequipo", aux.equipo.numeroserie);
+                data.agregarParametro("@idcliente", aux.cliente.id);
+                data.agregarParametro("@idequipo", aux.equipo.id);
                 data.agregarParametro("@idtecnico", aux.tecnico.ID);
                 data.agregarParametro("@problema", aux.problema);
+                aux.fecha_entrada = DateTime.Now;
                 data.agregarParametro("@fecha_entrada", aux.fecha_entrada);
  
                 data.ejecutarAccion();

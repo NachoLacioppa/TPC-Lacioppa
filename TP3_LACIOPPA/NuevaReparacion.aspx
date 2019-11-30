@@ -10,6 +10,7 @@
         <p>Cliente (Buscar por DNI)</p>
     <asp:TextBox ID="txtCliente" runat="server" class="form-control" placeholder="DNI" Width="150px"></asp:TextBox>
     <asp:Button ID="btnBuscarCliente" runat="server" Text="Buscar Cliente" class="btn btn-primary" OnClick="btnBuscarCliente_Click" />
+        <asp:TextBox ID="txtidcliente" runat="server" class="form-control" placeholder="ID" Width="150px" Height="23px" Enabled="False" Visible="false"></asp:TextBox>
         <asp:TextBox ID="txtNombre" runat="server" class="form-control" placeholder="Nombre" Width="150px" Height="23px" Enabled="False"></asp:TextBox>
         <asp:TextBox ID="txtApellido" runat="server" class="form-control" placeholder="Apellido" Width="150px" Height="23px" Enabled="False"></asp:TextBox>
         <asp:TextBox ID="txtTelefono" runat="server" class="form-control" placeholder="Telefono" Width="150px" Height="23px" Enabled="False"></asp:TextBox>
@@ -19,8 +20,10 @@
     <br />
     
     <p>Equipo</p>
+    <asp:TextBox ID="txtidequipo" runat="server" class="form-control" placeholder="ID" Width="150px" Height="23px" Enabled="False" Visible="true"></asp:TextBox>
     <asp:TextBox ID="txtNumeroSerie" runat="server" class="form-control" placeholder="Numero de Serie" Width="250px"></asp:TextBox>
     <asp:Button ID="btnBuscarEquipo" runat="server" Text="Buscar Equipo" class="btn btn-primary" OnClick="btnBuscarEquipo_Click" />
+    <%--<asp:Label ID="lblNoExiste" runat="server" Text="EQUIPO NO ENCONTRADO"></asp:Label>--%>
     <asp:TextBox ID="txtMarca" runat="server" class="form-control" placeholder="Marca" Width="250px"></asp:TextBox>
     <asp:TextBox ID="txtModelo" runat="server" class="form-control" placeholder="Modelo" Width="250px"></asp:TextBox>
     
