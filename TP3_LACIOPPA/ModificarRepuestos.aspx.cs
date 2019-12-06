@@ -32,7 +32,7 @@ namespace TP3_LACIOPPA
 
             txtcod.Text = re.codigo;
             txtnombre.Text = re.nombre;
-            txtcantidad.Text = re.cantidad.ToString();
+            //txtcantidad.Text = re.cantidad.ToString();
             txtprecio.Text = re.precio.ToString();
             dwCategorias.SelectedItem.Value = re.categoria.id.ToString();
 
@@ -45,7 +45,7 @@ namespace TP3_LACIOPPA
 
             re.codigo = txtcod.Text;
             re.nombre = txtnombre.Text;
-            re.cantidad = Convert.ToInt32(txtcantidad.Text);
+            //re.cantidad = Convert.ToInt32(txtcantidad.Text);
             re.precio = Convert.ToSingle(txtprecio.Text);
             re.categoria = new CategoriaRepuestos();
             re.categoria.id = Convert.ToInt32(dwCategorias.SelectedItem.Value);

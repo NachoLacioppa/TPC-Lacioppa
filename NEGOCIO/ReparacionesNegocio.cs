@@ -70,25 +70,176 @@ namespace NEGOCIO
             }
 
         }
+        public bool Repuestos_x_reparaciones(Reparaciones repa, Repuestos repu)
+        {
+            AccesoDatos data = new AccesoDatos();
+            try
+            {
 
-        //public Equipos ValidarSN(string sn)
-        //{
-        //    AccesoDatos datos = new AccesoDatos();
-        //    Equipos eq = new Equipos();
+                data.prepareStatement("insert into REPUESTOS_POR_REPARACIONES values (@idreparaciones, @idrepuesto)");
+                data.agregarParametro("@idreparaciones", repa.id);
+                data.agregarParametro("@idrepuesto", repu.id);
 
-        //    datos.setearQuery("select numeroserie from equipos where NUMEROSERIE = @NUMEROSERIE");
-        //    datos.agregarParametro("NUMEROSERIE", sn);
-        //    datos.ejecutarLector();
-        //    if (datos.lector.Read())
-        //    {
-        //        eq.numeroserie = datos.lector.GetString(0);
-        //    }
-        //    else
-        //    {
-        //        eq = null;
-        //    }
-        //    return eq;
-        //}
+                data.ejecutarAccion();
 
+                if (data.getAffectedRows() <= 0)
+                {
+                    return false;
+                }
+                else return true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                data.cerrarConexion();
+            }
+        }
+
+            public bool FinalizarReparacion(Reparaciones aux)
+            {
+            AccesoDatos data = new AccesoDatos();
+            data.prepareStatement("update reparaciones set idestado = 2, informe = @informe, precio = @precio, fecha_salida = @fecha_salida where id = @aux");
+            //data.agregarParametro("cantidad", aux.cantidad);
+            data.agregarParametro("@aux", aux.id);
+            data.agregarParametro("@informe", aux.informe);
+            data.agregarParametro("@precio", aux.presupuesto);
+            aux.fecha_salida = DateTime.Now;
+            data.agregarParametro("@fecha_salida", aux.fecha_salida);
+           
+            data.ejecutarAccion();
+            data.cerrarConexion();
+
+            if (data.getAffectedRows() <= 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
+
+        //BUSCA EL EQUIPO Y EL TECNICO
+        public Reparaciones BuscarReparacion2(string aux)
+        {
+            //INSTANCIO LA LISTA
+            List<Reparaciones> lista = new List<Reparaciones>();
+            //DECLARO EL OBJETO
+            Reparaciones rep = new Reparaciones();
+            //INSTANCIO LA CONECCION A LA BASE
+            AccesoDatos datos = new AccesoDatos();
+            //TIRO LA QUERY
+            datos.setearQuery("SELECT R.ID, R.ORDEN, CLI.NOMBRE, CLI.APELLIDO, CLI.TELEFONO, EQ.NUMEROSERIE AS 'NUMERO DE SERIE' ,EQ.MARCA, EQ.MODELO, TEC.USUARIO AS 'TECNICO', R.FECHA_ENTRADA AS 'ENTRADA', R.PROBLEMA, ER.NOMBRE AS 'ESTADO' FROM REPARACIONES AS R INNER JOIN CLIENTES AS CLI ON R.IDCLIENTE = CLI.ID INNER JOIN EQUIPOS AS EQ ON R.IDEQUIPO = EQ.ID INNER JOIN TECNICOS AS TEC ON R.IDTECNICO = TEC.ID INNER JOIN ESTADOS_REPARACION AS ER ON R.IDESTADO = ER.ID WHERE R.IDESTADO = 1 AND R.ORDEN = @AUX");
+            datos.agregarParametro("@AUX",aux);
+            //EJECUTO EL LECTOR
+            datos.ejecutarLector();
+
+            //MIENTRAS EL LECTOR LEA, DEVULVE LOS DATOS (DEBE COINSIDIR CON LA QUERY)
+
+            while (datos.lector.Read())
+            {
+                rep.cliente = new Clientes();
+                rep.cliente.nombre = datos.lector["NOMBRE"].ToString();
+                rep.cliente.apellido = datos.lector["APELLIDO"].ToString();
+                rep.cliente.telefono = datos.lector["TELEFONO"].ToString();
+
+                rep.equipo = new Equipos();
+                rep.equipo.numeroserie = datos.lector["NUMERO DE SERIE"].ToString();
+                rep.equipo.marca = datos.lector["MARCA"].ToString();
+                rep.equipo.modelo = datos.lector["MODELO"].ToString();
+
+                rep.tecnico = new Tecnicos();
+                rep.tecnico.usuario = datos.lector["TECNICO"].ToString();
+
+                rep.fecha_entrada = Convert.ToDateTime(datos.lector["ENTRADA"]);
+                rep.problema = datos.lector["PROBLEMA"].ToString();
+                rep.id = Convert.ToInt32(datos.lector["ID"]);
+
+                rep.estados = new EstadosReparacion();
+                rep.estados.nombre = datos.lector["ESTADO"].ToString();
+                
+            }
+            return rep;
+
+        }
+        //LISTA REPARACIONES FINALIZADAS
+        public List<Reparaciones> listarRep2()
+        {
+            //INSTANCIO LA LISTA
+            List<Reparaciones> lista = new List<Reparaciones>();
+            //DECLARO EL OBJETO
+            Reparaciones aux;
+            //INSTANCIO LA CONECCION A LA BASE
+            AccesoDatos datos = new AccesoDatos();
+            //TIRO LA QUERY
+            datos.setearQuery("SELECT R.ORDEN, CLI.NOMBRE, CLI.APELLIDO, CLI.TELEFONO, EQ.MARCA, EQ.MODELO, R.PROBLEMA, R.INFORME, R.FECHA_ENTRADA, R.FECHA_SALIDA FROM REPARACIONES AS R INNER JOIN CLIENTES AS CLI ON R.IDCLIENTE = CLI.ID INNER JOIN ESTADOS_REPARACION AS ER ON R.IDESTADO = ER.ID INNER JOIN EQUIPOS AS EQ ON R.IDEQUIPO = EQ.ID WHERE ER.ID = 2");
+            //EJECUTO EL LECTOR
+            datos.ejecutarLector();
+
+            //MIENTRAS EL LECTOR LEA, DEVULVE LOS DATOS (DEBE COINSIDIR CON LA QUERY)
+
+            while (datos.lector.Read())
+            {
+                aux = new Reparaciones();
+                aux.cliente = new Clientes();
+                aux.equipo = new Equipos();
+
+                aux.orden = Convert.ToInt64(datos.lector["ORDEN"]);
+                aux.cliente.nombre = datos.lector["NOMBRE"].ToString();
+                aux.cliente.apellido = datos.lector["APELLIDO"].ToString();
+                aux.cliente.telefono = datos.lector["TELEFONO"].ToString();
+                aux.equipo.marca = datos.lector["MARCA"].ToString();
+                aux.equipo.modelo = datos.lector["MODELO"].ToString();
+                aux.problema = datos.lector["PROBLEMA"].ToString();
+                aux.informe = datos.lector["INFORME"].ToString();
+                aux.fecha_entrada = Convert.ToDateTime(datos.lector["FECHA_ENTRADA"]);
+                aux.fecha_salida = Convert.ToDateTime(datos.lector["FECHA_SALIDA"]);
+
+                lista.Add(aux);
+            }
+            return lista;
+            //datos.cerrarConexion();
+        }
+
+
+        //LISTA REPARACIONES EN REPARACION
+        public List<Reparaciones> listarRep1()
+        {
+            //INSTANCIO LA LISTA
+            List<Reparaciones> lista = new List<Reparaciones>();
+            //DECLARO EL OBJETO
+            Reparaciones aux;
+            //INSTANCIO LA CONECCION A LA BASE
+            AccesoDatos datos = new AccesoDatos();
+            //TIRO LA QUERY
+            datos.setearQuery("SELECT R.ORDEN, CLI.NOMBRE, CLI.APELLIDO, CLI.TELEFONO, EQ.MARCA, EQ.MODELO, R.PROBLEMA, R.FECHA_ENTRADA FROM REPARACIONES AS R INNER JOIN CLIENTES AS CLI ON R.IDCLIENTE = CLI.ID INNER JOIN ESTADOS_REPARACION AS ER ON R.IDESTADO = ER.ID INNER JOIN EQUIPOS AS EQ ON R.IDEQUIPO = EQ.ID WHERE ER.ID = 1");
+            //EJECUTO EL LECTOR
+            datos.ejecutarLector();
+
+            //MIENTRAS EL LECTOR LEA, DEVULVE LOS DATOS (DEBE COINSIDIR CON LA QUERY)
+
+            while (datos.lector.Read())
+            {
+                aux = new Reparaciones();
+                aux.cliente = new Clientes();
+                aux.equipo = new Equipos();
+
+                aux.orden = Convert.ToInt64(datos.lector["ORDEN"]);
+                aux.cliente.nombre = datos.lector["NOMBRE"].ToString();
+                aux.cliente.apellido = datos.lector["APELLIDO"].ToString();
+                aux.cliente.telefono = datos.lector["TELEFONO"].ToString();
+                aux.equipo.marca = datos.lector["MARCA"].ToString();
+                aux.equipo.modelo = datos.lector["MODELO"].ToString();
+                aux.problema = datos.lector["PROBLEMA"].ToString();
+                aux.fecha_entrada = Convert.ToDateTime(datos.lector["FECHA_ENTRADA"]);
+
+                lista.Add(aux);
+            }
+            return lista;
+            //datos.cerrarConexion();
+        }
     }
 }

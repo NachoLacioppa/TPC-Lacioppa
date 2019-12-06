@@ -15,8 +15,8 @@
       <asp:TextBox ID="txtcod" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
       <p>Nombre</p>
       <asp:TextBox ID="txtnombre" runat="server" class="form-control" type="text" Width="450px"></asp:TextBox>
-      <p>Cantidad</p>
-      <asp:TextBox ID="txtcantidad" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
+     <%-- <p>Cantidad</p>
+      <asp:TextBox ID="txtcantidad" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>--%>
       <p>Precio</p>
       <asp:TextBox ID="txtprecio" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
       <p>Categoria</p>

@@ -9,3 +9,9 @@ C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\DOMINIO\bin\Debug
 C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\DOMINIO\obj\Debug\DOMINIO.dll
 C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\DOMINIO\obj\Debug\DOMINIO.pdb
 C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\DOMINIO\obj\Debug\DOMINIO.csprojAssemblyReference.cache
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\DOMINIO\bin\Debug\DOMINIO.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\DOMINIO\bin\Debug\DOMINIO.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\DOMINIO\obj\Debug\DOMINIO.csprojAssemblyReference.cache
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\DOMINIO\obj\Debug\DOMINIO.csproj.CoreCompileInputs.cache
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\DOMINIO\obj\Debug\DOMINIO.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\DOMINIO\obj\Debug\DOMINIO.pdb

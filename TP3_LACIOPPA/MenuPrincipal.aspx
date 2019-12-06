@@ -44,10 +44,10 @@
       
      <li><a href="AltaRepuesto.aspx">Nuevo Repuesto</a></li>
      <li>  <a href="BajaRepuestos.aspx">Eliminar Repuestos</a></li>
-     <li> <a href="StockRepuestos.aspx">Agregar Stock Repuestos</a></li>
+    <%-- <li> <a href="StockRepuestos.aspx">Agregar Stock Repuestos</a></li>--%>
      <li>  <a href="BusquedaRepuestos.aspx">Listar Repuestos</a></li>
      <li>  <a href="ModificarRepuestos.aspx">Modificar Repuestos</a></li>
-     <li>  <a href="AgregarCateogtiasRepuestos.aspx">Categorias</a></li>
+     <li>  <a href="AgregarCateogtiasRepuestos.aspx">CATEGORIAS</a></li>
       </div>
     
 
@@ -66,11 +66,10 @@
   </button>
 
         <div class="collapse multi-collapse" id="multiCollapseExample4">
-      
      <li><a href="NuevaReparacion.aspx">Nueva Reparacion</a></li>
-     <li>  <a href="#">Finalizar Reparacion</a></li>
-     <li> <a href="#">Listar Reparaciones</a></li>
- 
+     <li>  <a href="FinalizarReparacion.aspx">Finalizar Reparacion</a></li>
+     <li> <a href="ListarReparaciones.aspx">Listar Reparaciones</a></li>
+     <li> <a href="EquiposCargados.aspx">EQUIPOS CARGADOS</a></li>
       </div>
 
     </div>

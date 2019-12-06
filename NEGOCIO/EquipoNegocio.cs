@@ -39,6 +39,7 @@ namespace NEGOCIO
             try
             {
                 data.prepareStatement("insert into equipos values (@numeroserie , @marca , @modelo)");
+                //data.agregarParametro("@id",aux.id);
                 data.agregarParametro("@numeroserie", aux.numeroserie);
                 data.agregarParametro("@marca", aux.marca);
                 data.agregarParametro("@modelo", aux.modelo);
@@ -104,6 +105,34 @@ namespace NEGOCIO
             {
                 datos.cerrarConexion();
             }
+        }
+
+        public List<Equipos> listar()
+        {
+            //INSTANCIO LA LISTA
+            List<Equipos> lista = new List<Equipos>();
+            //DECLARO EL OBJETO
+            Equipos aux;
+            //INSTANCIO LA CONECCION A LA BASE
+            AccesoDatos datos = new AccesoDatos();
+            //TIRO LA QUERY
+            datos.setearQuery("SELECT NUMEROSERIE, MARCA, MODELO FROM EQUIPOS");
+            //EJECUTO EL LECTOR
+            datos.ejecutarLector();
+
+            //MIENTRAS EL LECTOR LEA, DEVULVE LOS DATOS (DEBE COINSIDIR CON LA QUERY)
+            while (datos.lector.Read())
+            {
+                aux = new Equipos();
+
+                aux.numeroserie = datos.lector["NUMEROSERIE"].ToString();
+                aux.marca = datos.lector["MARCA"].ToString();
+                aux.modelo = datos.lector["MODELO"].ToString();
+
+                lista.Add(aux);
+            }
+            return lista;
+            //datos.cerrarConexion();
         }
 
     }

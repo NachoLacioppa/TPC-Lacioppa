@@ -11,3 +11,17 @@ C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\obj\
 C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csproj.CopyComplete
 C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.dll
 C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll.config
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\TP3_LACIOPPA.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\DOMINIO.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\NEGOCIO.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\DOMINIO.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\NEGOCIO.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csprojAssemblyReference.cache
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csproj.CoreCompileInputs.cache
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csproj.CopyComplete
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.pdb

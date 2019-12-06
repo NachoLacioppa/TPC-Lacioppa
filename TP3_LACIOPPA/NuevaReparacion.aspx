@@ -20,7 +20,7 @@
     <br />
     
     <p>Equipo</p>
-    <asp:TextBox ID="txtidequipo" runat="server" class="form-control" placeholder="ID" Width="150px" Height="23px" Enabled="False" Visible="true"></asp:TextBox>
+    <asp:TextBox ID="txtidequipo" runat="server" class="form-control" placeholder="ID" Width="150px" Height="23px" Enabled="False" Visible="false"></asp:TextBox>
     <asp:TextBox ID="txtNumeroSerie" runat="server" class="form-control" placeholder="Numero de Serie" Width="250px"></asp:TextBox>
     <asp:Button ID="btnBuscarEquipo" runat="server" Text="Buscar Equipo" class="btn btn-primary" OnClick="btnBuscarEquipo_Click" />
     <%--<asp:Label ID="lblNoExiste" runat="server" Text="EQUIPO NO ENCONTRADO"></asp:Label>--%>

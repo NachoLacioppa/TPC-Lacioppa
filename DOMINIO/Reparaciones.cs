@@ -8,6 +8,7 @@ namespace DOMINIO
 {
     public class Reparaciones
     {
+        public int id { get; set; }
         public long orden { get; set; }
         public Clientes cliente { get; set; }
         public Tecnicos tecnico { get; set; }

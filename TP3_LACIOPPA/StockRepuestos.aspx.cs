@@ -21,11 +21,11 @@ namespace TP3_LACIOPPA
         protected void btnBuscarRepuesto_Click(object sender, EventArgs e)
         {
 
-            Repuestos re = new Repuestos();
-            RepuestosNegocio rn = new RepuestosNegocio();
+            //Repuestos re = new Repuestos();
+            //RepuestosNegocio rn = new RepuestosNegocio();
 
-            dgvListarRepuestos.DataSource = rn.listarRepuestoStock(txtBuscarRepuesto.Text);
-            dgvListarRepuestos.DataBind();
+            //dgvListarRepuestos.DataSource = rn.listarRepuestoStock(txtBuscarRepuesto.Text);
+            //dgvListarRepuestos.DataBind();
 
         }
     }

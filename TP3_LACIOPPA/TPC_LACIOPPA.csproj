@@ -81,6 +81,9 @@
     <Content Include="BusquedaCliente.aspx" />
     <Content Include="BusquedaRepuestos.aspx" />
     <Content Include="BusquedaTecnicos.aspx" />
+    <Content Include="EquiposCargados.aspx" />
+    <Content Include="FinalizarReparacion.aspx" />
+    <Content Include="ListarReparaciones.aspx" />
     <Content Include="ModificarCliente.aspx" />
     <Content Include="ModificarRepuestos.aspx" />
     <Content Include="ModificarTecnico.aspx" />
@@ -237,8 +240,29 @@
     <Compile Include="BusquedaTecnicos.aspx.designer.cs">
       <DependentUpon>BusquedaTecnicos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EquiposCargados.aspx.cs">
+      <DependentUpon>EquiposCargados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EquiposCargados.aspx.designer.cs">
+      <DependentUpon>EquiposCargados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinalizarReparacion.aspx.cs">
+      <DependentUpon>FinalizarReparacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinalizarReparacion.aspx.designer.cs">
+      <DependentUpon>FinalizarReparacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListarReparaciones.aspx.cs">
+      <DependentUpon>ListarReparaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListarReparaciones.aspx.designer.cs">
+      <DependentUpon>ListarReparaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

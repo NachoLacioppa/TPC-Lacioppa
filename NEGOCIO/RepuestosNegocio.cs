@@ -20,7 +20,7 @@ namespace NEGOCIO
             AccesoDatos datos = new AccesoDatos();
             //TIRO LA QUERY
             //datos.setearQuery("select codigo, nombre, cantidad, precio from repuestos where estado = 1");
-            datos.setearQuery("select r.CODIGO,r.NOMBRE,r.CANTIDAD,r.PRECIO,cr.NOMBRE as 'CATEGORIA' from REPUESTOS as r inner join CATEGORIAS_REPUESTOS as cr on Cr.iD = R.IDCATEGORIA where r.ESTADO = 1");
+            datos.setearQuery("select r.CODIGO,r.NOMBRE,r.PRECIO,cr.NOMBRE as 'CATEGORIA' from REPUESTOS as r inner join CATEGORIAS_REPUESTOS as cr on Cr.iD = R.IDCATEGORIA where r.ESTADO = 1");
             //EJECUTO EL LECTOR
             datos.ejecutarLector();
 
@@ -32,7 +32,7 @@ namespace NEGOCIO
 
                 aux.codigo = datos.lector["Codigo"].ToString();
                 aux.nombre = datos.lector["Nombre"].ToString();
-                aux.cantidad = Convert.ToInt32(datos.lector["Cantidad"].ToString());
+                //aux.cantidad = Convert.ToInt32(datos.lector["Cantidad"].ToString());
                 aux.precio = Convert.ToSingle(datos.lector["Precio"].ToString());
                 aux.categoria = new CategoriaRepuestos();
                 aux.categoria.nombre = datos.lector["CATEGORIA"].ToString();
@@ -46,10 +46,10 @@ namespace NEGOCIO
             AccesoDatos data = new AccesoDatos();
             try
             {
-                data.prepareStatement("insert into repuestos values (@codigo, @nombre, @cantidad, @precio, @idcategoria, 1)");
+                data.prepareStatement("insert into repuestos values (@codigo, @nombre, @precio, @idcategoria, 1)");
                 data.agregarParametro("@codigo", aux.codigo);
                 data.agregarParametro("@nombre", aux.nombre);
-                data.agregarParametro("@cantidad", aux.cantidad);
+                //data.agregarParametro("@cantidad", aux.cantidad);
                 data.agregarParametro("@precio", aux.precio);
                 data.agregarParametro("@idcategoria", aux.categoria.id);
 
@@ -115,7 +115,7 @@ namespace NEGOCIO
             //INSTANCIO LA CONECCION A LA BASE
             AccesoDatos datos = new AccesoDatos();
             //TIRO LA QUERY
-            datos.setearQuery("select codigo, nombre, cantidad, precio, idcategoria, estado from Repuestos where estado = 1 and codigo = '" + aux + "'");
+            datos.setearQuery("select codigo, nombre, precio, idcategoria, estado from Repuestos where estado = 1 and codigo = '" + aux + "'");
             //EJECUTO EL LECTOR
             datos.ejecutarLector();
 
@@ -125,7 +125,7 @@ namespace NEGOCIO
             {
                 re.codigo = datos.lector["Codigo"].ToString();
                 re.nombre = datos.lector["Nombre"].ToString();
-                re.cantidad = Convert.ToInt32(datos.lector["Cantidad"].ToString());
+                //re.cantidad = Convert.ToInt32(datos.lector["Cantidad"].ToString());
                 re.precio = Convert.ToSingle(datos.lector["Precio"].ToString());
                 re.categoria = new CategoriaRepuestos();
                 re.categoria.id = Convert.ToInt32(datos.lector["idCategoria"].ToString());
@@ -136,10 +136,10 @@ namespace NEGOCIO
         public bool ModificarRepuesto(Repuestos aux)
         {
             AccesoDatos data = new AccesoDatos();
-            data.prepareStatement("update repuestos set codigo = @codigo, nombre = @nombre, cantidad = @cantidad, precio = @precio, idcategoria = @idcategoria where codigo = '" + aux.codigo + "'");
+            data.prepareStatement("update repuestos set codigo = @codigo, nombre = @nombre, precio = @precio, idcategoria = @idcategoria where codigo = '" + aux.codigo + "'");
             data.agregarParametro("codigo", aux.codigo);
             data.agregarParametro("nombre", aux.nombre);
-            data.agregarParametro("cantidad", aux.cantidad);
+            //data.agregarParametro("cantidad", aux.cantidad);
             data.agregarParametro("precio", aux.precio);
             data.agregarParametro("idcategoria", aux.categoria.id);
             
@@ -152,7 +152,8 @@ namespace NEGOCIO
             }
             return true;
         }
-        public List<Repuestos> listarRepuestoStock(string aux)
+
+        public Repuestos BuscarCodigo2(string aux)
         {
             //INSTANCIO LA LISTA
             List<Repuestos> lista = new List<Repuestos>();
@@ -161,7 +162,7 @@ namespace NEGOCIO
             //INSTANCIO LA CONECCION A LA BASE
             AccesoDatos datos = new AccesoDatos();
             //TIRO LA QUERY
-            datos.setearQuery("select CODIGO, NOMBRE, CANTIDAD from Repuestos where estado = 1 and codigo = '" + aux + "'");
+            datos.setearQuery("select id, codigo, nombre, precio from Repuestos where estado = 1 and codigo = '" + aux + "'");
             //EJECUTO EL LECTOR
             datos.ejecutarLector();
 
@@ -169,14 +170,44 @@ namespace NEGOCIO
 
             while (datos.lector.Read())
             {
+                re.id = Convert.ToInt32(datos.lector["id"].ToString());
                 re.codigo = datos.lector["Codigo"].ToString();
                 re.nombre = datos.lector["Nombre"].ToString();
-                re.cantidad = Convert.ToInt32(datos.lector["Cantidad"].ToString());
+                re.precio = Convert.ToSingle(datos.lector["Precio"].ToString());
+              
+            }
+            return re;
+        }
 
-                lista.Add(re);
+        public List<Repuestos> listarRepuestosReparacion(string auxid)
+        {
+            //INSTANCIO LA LISTA
+            List<Repuestos> lista = new List<Repuestos>();
+            //DECLARO EL OBJETO
+            Repuestos aux;
+            //INSTANCIO LA CONECCION A LA BASE
+            AccesoDatos datos = new AccesoDatos();
+            //TIRO LA QUERY
+            //datos.setearQuery("select codigo, nombre, cantidad, precio from repuestos where estado = 1");
+            datos.setearQuery("select id, nombre, precio from repuestos where estado = 1 and id = @auxid");
+            datos.agregarParametro("auxid", auxid);
+            //EJECUTO EL LECTOR
+            datos.ejecutarLector();
 
+            //MIENTRAS EL LECTOR LEA, DEVULVE LOS DATOS (DEBE COINSIDIR CON LA QUERY)
+
+            while (datos.lector.Read())
+            {
+                aux = new Repuestos();
+
+                aux.id = Convert.ToInt32(datos.lector["id"]);
+                aux.nombre = datos.lector["Nombre"].ToString();
+                aux.precio = Convert.ToSingle(datos.lector["Precio"].ToString());
+
+                lista.Add(aux);
             }
             return lista;
+            //datos.cerrarConexion();
         }
 
     }

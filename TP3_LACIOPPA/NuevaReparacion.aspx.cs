@@ -11,15 +11,17 @@ namespace TP3_LACIOPPA
 {
     public partial class NuevaReparacion : System.Web.UI.Page
     {
+        //Equipos eq = new Equipos();
+        //EquipoNegocio eqn = new EquipoNegocio();
         protected void Page_Load(object sender, EventArgs e)
         {
             Reparaciones rep = new Reparaciones();
             ReparacionesNegocio repn = new ReparacionesNegocio();
             txtOrden.Text = repn.BuscarOrden().ToString();
 
-            Equipos eq = new Equipos();
-            EquipoNegocio eqn = new EquipoNegocio();
-            txtidequipo.Text = eqn.BuscarIDEquipo().ToString();
+            //Equipos eq = new Equipos();
+            //EquipoNegocio eqn = new EquipoNegocio();
+            //txtidequipo.Text = eqn.BuscarIDEquipo().ToString();
 
             if (!IsPostBack)
             {
@@ -50,6 +52,7 @@ namespace TP3_LACIOPPA
             EquipoNegocio eqn = new EquipoNegocio();
 
             eq = eqn.BuscarCodigo(txtNumeroSerie.Text);
+            txtidequipo.Text = eqn.BuscarIDEquipo().ToString();
             txtidequipo.Text = Convert.ToInt32(eq.id).ToString();
             txtMarca.Text = eq.marca;
             txtModelo.Text = eq.modelo;
@@ -63,7 +66,6 @@ namespace TP3_LACIOPPA
                 Reparaciones re = new Reparaciones();
                 ReparacionesNegocio ren = new ReparacionesNegocio();
 
-                Equipos eq = new Equipos();
                 EquipoNegocio eqn = new EquipoNegocio();
 
                 re.orden = Convert.ToInt64(txtOrden.Text);
@@ -75,17 +77,16 @@ namespace TP3_LACIOPPA
                 sn = eqn.ValidarSN(txtNumeroSerie.Text);
                 if (sn == null)
                 {
-                    //CUANDO CARGA EL NUEVO EQUIPO EN RE.EQUIPO.ID LO CARGA CON 0
-                    
+                    Equipos eq = new Equipos();
+
+                    txtidequipo.Text = eqn.BuscarIDEquipo().ToString();
                     eq.numeroserie = txtNumeroSerie.Text;
                     eq.marca = txtMarca.Text;
                     eq.modelo = txtModelo.Text;
 
-                    eqn.altaEquipo(sn);
-
+                    eqn.altaEquipo(eq);
                 }
 
-                //PERO SI sn NO ES NULL LLEGA ACA LO CARGA BIEN
                 re.equipo = new Equipos();
                 re.equipo.id = Convert.ToInt32(txtidequipo.Text);
                 re.equipo.numeroserie = txtNumeroSerie.Text;

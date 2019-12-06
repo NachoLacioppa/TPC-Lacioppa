@@ -11,11 +11,9 @@
                 <th scope="col">APELLIDO</th>
                 <th scope="col">DNI</th>
                 <th scope="col">PERFIL</th>
-               
             </tr>
         </thead>
         <tbody>
-    
        <% foreach (var item in listarTecnicos)
             { %>
             <tr>
@@ -27,7 +25,6 @@
               <td> <% = item.perfil.nombre %></td>
             </tr>
         <% } %>
-    
     </tbody>
 </table>            
 </asp:Content>

@@ -11,7 +11,7 @@ namespace TP3_LACIOPPA
 {
     public partial class AltaTecnicos : System.Web.UI.Page
     {
-        private List<PerfilesTecnicos> Lista;
+        //private List<PerfilesTecnicos> Lista;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
