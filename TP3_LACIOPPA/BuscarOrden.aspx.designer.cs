@@ -11,26 +11,17 @@ namespace TP3_LACIOPPA
 {
 
 
-    public partial class FinalizarReparacion
+    public partial class BuscarOrden
     {
 
         /// <summary>
-        /// Control txtOrden.
+        /// Control txtBuscarOrden.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOrden;
-
-        /// <summary>
-        /// Control txtIDReparacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIDReparacion;
+        protected global::System.Web.UI.WebControls.TextBox txtBuscarOrden;
 
         /// <summary>
         /// Control btnBuscarOrden.
@@ -42,76 +33,76 @@ namespace TP3_LACIOPPA
         protected global::System.Web.UI.WebControls.Button btnBuscarOrden;
 
         /// <summary>
-        /// Control txtNombreCli.
+        /// Control txtIDORDEN.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreCli;
+        protected global::System.Web.UI.WebControls.TextBox txtIDORDEN;
 
         /// <summary>
-        /// Control txtApellidoCli.
+        /// Control txtIDESTADO.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellidoCli;
+        protected global::System.Web.UI.WebControls.TextBox txtIDESTADO;
 
         /// <summary>
-        /// Control txtTelefonoCli.
+        /// Control lblCliNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTelefonoCli;
+        protected global::System.Web.UI.WebControls.Label lblCliNombre;
 
         /// <summary>
-        /// Control txtSN.
+        /// Control lblCliApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSN;
+        protected global::System.Web.UI.WebControls.Label lblCliApellido;
 
         /// <summary>
-        /// Control txtMarca.
+        /// Control lblCliTelefono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMarca;
+        protected global::System.Web.UI.WebControls.Label lblCliTelefono;
 
         /// <summary>
-        /// Control txtModelo.
+        /// Control lblEqSN.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModelo;
+        protected global::System.Web.UI.WebControls.Label lblEqSN;
 
         /// <summary>
-        /// Control txtUser.
+        /// Control lblEqMarca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUser;
+        protected global::System.Web.UI.WebControls.Label lblEqMarca;
 
         /// <summary>
-        /// Control txtFechaIng.
+        /// Control lblEqModelo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaIng;
+        protected global::System.Web.UI.WebControls.Label lblEqModelo;
 
         /// <summary>
         /// Control txtProblema.
@@ -123,13 +114,22 @@ namespace TP3_LACIOPPA
         protected global::System.Web.UI.WebControls.TextBox txtProblema;
 
         /// <summary>
-        /// Control txtEstado.
+        /// Control lblTecasignado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEstado;
+        protected global::System.Web.UI.WebControls.Label lblTecasignado;
+
+        /// <summary>
+        /// Control lblinformefinal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblinformefinal;
 
         /// <summary>
         /// Control txtInforme.
@@ -141,120 +141,39 @@ namespace TP3_LACIOPPA
         protected global::System.Web.UI.WebControls.TextBox txtInforme;
 
         /// <summary>
-        /// Control txtCodigoRep.
+        /// Control lblRepuestosUsados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCodigoRep;
+        protected global::System.Web.UI.WebControls.Label lblRepuestosUsados;
 
         /// <summary>
-        /// Control btnBuscarRepuesto.
+        /// Control dwRepuestosUsados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscarRepuesto;
+        protected global::System.Web.UI.WebControls.GridView dwRepuestosUsados;
 
         /// <summary>
-        /// Control lblVerificaRepuesto.
+        /// Control lblpf.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVerificaRepuesto;
+        protected global::System.Web.UI.WebControls.Label lblpf;
 
         /// <summary>
-        /// Control txtIDRepuesto.
+        /// Control lblPreciofinal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIDRepuesto;
-
-        /// <summary>
-        /// Control txtNompreRep.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNompreRep;
-
-        /// <summary>
-        /// Control txtPrecioRepuesto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrecioRepuesto;
-
-        /// <summary>
-        /// Control btnAgregarRepuesto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregarRepuesto;
-
-        /// <summary>
-        /// Control gvDatosRepuestos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvDatosRepuestos;
-
-        /// <summary>
-        /// Control txtPrecioAcumulativoRepuestos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrecioAcumulativoRepuestos;
-
-        /// <summary>
-        /// Control txtPrecioManoObra.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrecioManoObra;
-
-        /// <summary>
-        /// Control btnCalcularTotal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCalcularTotal;
-
-        /// <summary>
-        /// Control txtPrecioTotal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrecioTotal;
-
-        /// <summary>
-        /// Control btnFinalizarOrden.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFinalizarOrden;
+        protected global::System.Web.UI.WebControls.Label lblPreciofinal;
     }
 }

@@ -24,29 +24,43 @@ namespace TP3_LACIOPPA
             }
         }
 
+        public Tecnicos tecu;
+        public Tecnicos tecu2;
         protected void btnAgregarTecnico_Click(object sender, EventArgs e)
         {
-            try
+            Tecnicos te = new Tecnicos();
+            TecnicoNegocio ten = new TecnicoNegocio();
+
+            if (string.IsNullOrEmpty(txtUSER.Text))
             {
-                Tecnicos te = new Tecnicos();
-                TecnicoNegocio ten = new TecnicoNegocio();
-
-                te.usuario = txtUSER.Text;
-                te.contraseña = txtPASS.Text;
-                te.perfil = new PerfilesTecnicos();
-                te.perfil.id = Convert.ToInt32(dwPerfil.SelectedItem.Value);
-                te.nombre = txtnombre.Text;
-                te.apellido = txtapellido.Text;
-                te.dni = txtDNI.Text;
-                te.sueldo = Convert.ToSingle(txtsueldo.Text);
-
-                ten.altaTecnico(te);
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('TECNICO AGREGADO');window.location ='MenuPrincipal.aspx';", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('USUARIO Y/O DNI NULOS');window.location ='MenuPrincipal.aspx';", true);
             }
-
-            catch (Exception ex)
+            else
             {
-                throw ex;
+                tecu = ten.ValidarUsuario1(txtDNI.Text);
+                tecu2 = ten.ValidarUsuario2(txtUSER.Text);
+
+                if (tecu != null || tecu2 != null)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('TECNICO EXISTENTE, VERIFIQUE USUARIO Y/O DNI');window.location ='AltaTecnicos.aspx';", true);
+                }
+
+                else if (tecu == null || tecu2 == null)
+                {
+                    te.usuario = txtUSER.Text;
+                    te.contraseña = txtPASS.Text;
+
+                    te.perfil = new PerfilesTecnicos();
+                    te.perfil.id = Convert.ToInt32(dwPerfil.SelectedItem.Value);
+
+                    te.nombre = txtnombre.Text;
+                    te.apellido = txtapellido.Text;
+                    te.dni = txtDNI.Text;
+                    te.sueldo = Convert.ToSingle(txtsueldo.Text);
+
+                    ten.altaTecnico(te);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('TECNICO AGREGADO');window.location ='MenuPrincipal.aspx';", true);
+                }
             }
         }
     }

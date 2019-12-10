@@ -21,19 +21,19 @@ namespace TP3_LACIOPPA
         {
             TecnicoNegocio tecn = new TecnicoNegocio();
 
-            us = tecn.ValidarUsuario(txtBuscaTecnico.Text);
+            us = tecn.ValidarUsuario2(txtBuscaTecnico.Text);
             //no existe
             if (us == null)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO EXISTE UN TECNICO CON ESE USUARIO');window.location ='BajaCliente.aspx';", true);
             }
             //ya esta eliminado
-            if (us.estado == false)
+            else if (us.estado == false)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('TECNICO YA ELIMINADO');window.location ='BajaCliente.aspx';", true);
             }
             //existe y actualiza estado a cero
-            if (us.estado == true)
+            else if (us.estado == true)
             {
                 tecn.bajaTecnicos(us);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('TECNICO ELIMINADO!!!');window.location ='BajaCliente.aspx';", true);

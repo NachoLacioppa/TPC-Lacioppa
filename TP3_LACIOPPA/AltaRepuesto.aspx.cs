@@ -28,6 +28,7 @@ namespace TP3_LACIOPPA
 
         }
 
+        public Repuestos repu;
         protected void btnAltaRepuesto_Click(object sender, EventArgs e)
         {
             try
@@ -35,16 +36,30 @@ namespace TP3_LACIOPPA
             Repuestos re = new Repuestos();
             RepuestosNegocio ren = new RepuestosNegocio();
 
-            re.codigo = txtCodigo.Text;
-            re.nombre = txtnombre.Text;
-            re.precio = Convert.ToSingle(txtPrecio.Text);
-            //re.cantidad = Convert.ToInt32(txtCantidad.Text);
+                if (string.IsNullOrEmpty(txtCodigo.Text))
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('CODIGO NULO');window.location ='AltaRepuesto.aspx';", true);
+                }
 
-            re.categoria = new CategoriaRepuestos();
-            re.categoria.id = Convert.ToInt32(dwCategorias.SelectedItem.Value);
+                repu = ren.ValidarCodigo(txtCodigo.Text);
 
-            ren.altaRepuesto(re);
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('REPUESTO AGREGADO');window.location ='MenuPrincipal.aspx';", true);
+                if (repu == null)
+                {
+                    re.codigo = txtCodigo.Text;
+                    re.nombre = txtnombre.Text;
+                    re.precio = Convert.ToSingle(txtPrecio.Text);
+
+                    re.categoria = new CategoriaRepuestos();
+                    re.categoria.id = Convert.ToInt32(dwCategorias.SelectedItem.Value);
+
+                    ren.altaRepuesto(re);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('REPUESTO AGREGADO');window.location ='MenuPrincipal.aspx';", true);
+                }
+
+                else if(repu != null)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('CODIGO REPETIDO');window.location ='AltaRepuesto.aspx';", true);
+                }
             }
 
             catch (Exception ex)

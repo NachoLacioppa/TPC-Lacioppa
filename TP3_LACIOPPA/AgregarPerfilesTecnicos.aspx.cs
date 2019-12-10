@@ -23,6 +23,11 @@ namespace TP3_LACIOPPA
             PerfilesTecnicos pt = new PerfilesTecnicos();
             PerfilesTecnicosNegocio ptn = new PerfilesTecnicosNegocio();
 
+            if (string.IsNullOrEmpty(txtPerfil.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('INGRESE ALGUNA CATEGORIA');window.location ='AgregarPerfilesTecnicos.aspx';", true);
+            }
+
             pt.nombre = txtPerfil.Text;
 
             ptn.altaPerfilTecnico(pt);

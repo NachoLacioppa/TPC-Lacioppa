@@ -30,6 +30,7 @@ namespace TP3_LACIOPPA
 
             re = ren.BuscarCodigo(txtBuscarRepuesto.Text);
 
+
             txtcod.Text = re.codigo;
             txtnombre.Text = re.nombre;
             //txtcantidad.Text = re.cantidad.ToString();
@@ -42,6 +43,11 @@ namespace TP3_LACIOPPA
         {
             Repuestos re = new Repuestos();
             RepuestosNegocio ren = new RepuestosNegocio();
+
+            if (string.IsNullOrEmpty(txtcod.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('CODIGO NULO');window.location ='ModificarRepuestos.aspx';", true);
+            }
 
             re.codigo = txtcod.Text;
             re.nombre = txtnombre.Text;

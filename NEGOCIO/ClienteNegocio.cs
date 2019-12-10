@@ -79,7 +79,7 @@ namespace NEGOCIO
             AccesoDatos datos = new AccesoDatos();
             Clientes cli = new Clientes();
 
-            datos.setearQuery("Select id, dni, estado from Clientes where dni = @dni");
+            datos.setearQuery("Select id, dni, estado from Clientes where dni = @dni and estado = 1");
             datos.agregarParametro("dni", dnicliente);
             datos.ejecutarLector();
             if (datos.lector.Read())

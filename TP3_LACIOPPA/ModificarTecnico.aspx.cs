@@ -28,7 +28,7 @@ namespace TP3_LACIOPPA
             Tecnicos tec = new Tecnicos();
             TecnicoNegocio tecn = new TecnicoNegocio();
 
-            tec.usuario = txtusuario.Text;
+            tec.usuario = txtUser.Text;
             tec.nombre = txtnombre.Text;
             tec.apellido = txtApellido.Text;
             tec.dni = txtDNI.Text;
@@ -48,7 +48,7 @@ namespace TP3_LACIOPPA
 
             tec = tecn.BuscarUsuario(txtBuscarUsuario.Text);
 
-            txtusuario.Text = tec.usuario;
+            txtUser.Text = tec.usuario;
             txtnombre.Text = tec.nombre;
             txtApellido.Text = tec.apellido;
             txtDNI.Text = tec.dni.ToString();

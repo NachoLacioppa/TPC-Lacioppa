@@ -19,7 +19,7 @@ namespace NEGOCIO
             AccesoDatos datos = new AccesoDatos();
             //TIRO LA QUERY
             //datos.setearQuery("select codigo, nombre, cantidad, precio from repuestos where estado = 1");
-            datos.setearQuery("SELECT t.USUARIO, t.NOMBRE,t.APELLIDO,t.DNI, pt.NOMBRE AS 'PERFIL' from TECNICOS as t inner join PERFILES_TECNICOS as pt on pt.id = t.id where t.ESTADO = 1");
+            datos.setearQuery("SELECT t.USUARIO, t.NOMBRE, t.APELLIDO, t.DNI, pt.NOMBRE AS 'PERFIL' from TECNICOS as t inner join PERFILES_TECNICOS as pt on pt.id = t.id where t.ESTADO = 1");
             //EJECUTO EL LECTOR
             datos.ejecutarLector();
 
@@ -34,7 +34,7 @@ namespace NEGOCIO
                 aux.apellido = datos.lector["Apellido"].ToString();
                 aux.dni = datos.lector["DNI"].ToString();
                 aux.perfil = new PerfilesTecnicos();
-                aux.perfil.nombre = datos.lector["perfil"].ToString();
+                aux.perfil.nombre = datos.lector["PERFIL"].ToString();
                 lista.Add(aux);
             }
             return lista;
@@ -87,18 +87,20 @@ namespace NEGOCIO
             }
             return true;
         }
-        public Tecnicos ValidarUsuario(string us)
+        //VALIDAR DNI
+        public Tecnicos ValidarUsuario1(string us)
         {
             AccesoDatos datos = new AccesoDatos();
             Tecnicos re = new Tecnicos();
 
-            datos.setearQuery("Select usuario, estado from tecnicos where usuario = @usuario");
-            datos.agregarParametro("usuario", us);
+            datos.setearQuery("Select usuario, dni, estado from tecnicos where DNI = @DNI");
+            datos.agregarParametro("DNI", us);
             datos.ejecutarLector();
             if (datos.lector.Read())
             {
                 re.usuario = datos.lector.GetString(0);
-                re.estado = datos.lector.GetBoolean(1);
+                re.dni = datos.lector.GetString(1);
+                re.estado = datos.lector.GetBoolean(2);
             }
             else
             {
@@ -106,6 +108,30 @@ namespace NEGOCIO
             }
             return re;
         }
+
+        //VALIDAR USUARIO
+        public Tecnicos ValidarUsuario2(string us)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Tecnicos re = new Tecnicos();
+
+            datos.setearQuery("Select usuario, dni, estado from tecnicos where usuario = @usuario");
+            datos.agregarParametro("usuario", us);
+            datos.ejecutarLector();
+            if (datos.lector.Read())
+            {
+                re.usuario = datos.lector.GetString(0);
+                re.dni = datos.lector.GetString(1);
+                re.estado = datos.lector.GetBoolean(2);
+            }
+            else
+            {
+                re = null;
+            }
+            return re;
+        }
+
+
         public Tecnicos BuscarUsuario(string aux)
         {
             //INSTANCIO LA LISTA

@@ -78,6 +78,7 @@
     <Content Include="BajaCliente.aspx" />
     <Content Include="BajaRepuestos.aspx" />
     <Content Include="BajaTecnicos.aspx" />
+    <Content Include="BuscarOrden.aspx" />
     <Content Include="BusquedaCliente.aspx" />
     <Content Include="BusquedaRepuestos.aspx" />
     <Content Include="BusquedaTecnicos.aspx" />
@@ -218,6 +219,13 @@
     </Compile>
     <Compile Include="BajaTecnicos.aspx.designer.cs">
       <DependentUpon>BajaTecnicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarOrden.aspx.cs">
+      <DependentUpon>BuscarOrden.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuscarOrden.aspx.designer.cs">
+      <DependentUpon>BuscarOrden.aspx</DependentUpon>
     </Compile>
     <Compile Include="BusquedaCliente.aspx.cs">
       <DependentUpon>BusquedaCliente.aspx</DependentUpon>

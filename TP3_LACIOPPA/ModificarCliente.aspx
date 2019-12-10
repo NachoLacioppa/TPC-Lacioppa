@@ -2,31 +2,36 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<form>
     <h2>MODIFICAR CLIENTE</h2>
-    <br />
-    <p>Buscar cliente: (beta: solo dni)</p>
-    <asp:TextBox ID="txtBuscarMod" runat="server" class="form-control" Width="150px"></asp:TextBox>
-    <br />
-    <asp:Button ID="btnBuscarClienteMod" runat="server" Text="Buscar" class="btn btn-primary" OnClick="btnBuscarClienteMod_Click"/>
-    <br />
-    <br />
-    <form>
-      <p>Nombre</p>
-      <asp:TextBox ID="txtnombre" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
-      <p>Apellido</p>
-      <asp:TextBox ID="txtApellido" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
-      <p>DNI</p>
-      <asp:TextBox ID="txtDNI" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
-      <p>Direccion</p>
-      <asp:TextBox ID="txtDireccion" runat="server" class="form-control" type="text" Width="250px"></asp:TextBox>
-      <p>Localidad</p>
-      <asp:TextBox ID="txtLocalidad" runat="server" class="form-control" type="text" Width="250px"></asp:TextBox>
-      <p>Telefono</p>
-      <asp:TextBox ID="txtTelefono" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
-      <p>Mail</p>
-      <asp:TextBox ID="txtMail" runat="server" class="form-control" type="text" Width="300px"></asp:TextBox>
-      <br />
-      <asp:Button ID="btnModificarCliente" runat="server" Text="Modificar" class="btn btn-warning" OnClick="btnModificarCliente_Click1"/>
-    </form>
+     <div class="form-row">
+    <div class="form-group col-md-6">
+        <asp:Label Text="Buscar cliente (solo dni)" runat="server" />
+        <asp:TextBox ID="txtBuscarMod" runat="server" class="form-control" Width="150px"></asp:TextBox>  
+        <asp:Button ID="btnBuscarClienteMod" runat="server" Text="Buscar" class="btn btn-primary" OnClick="btnBuscarClienteMod_Click"/>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+            <asp:Label Text="Nombre" runat="server" />
+            <asp:TextBox ID="txtnombre" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
+            <asp:Label Text="Apellido" runat="server" />
+            <asp:TextBox ID="txtApellido" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
+            <asp:Label Text="DNI" runat="server" />
+            <asp:TextBox ID="txtDNI" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
+    </div>
+  </div>
+  <div class="form-group">
+    <asp:Label Text="Direccion" runat="server" />
+            <asp:TextBox ID="txtDireccion" runat="server" class="form-control" type="text" Width="250px"></asp:TextBox>
+            <asp:Label Text="Localidad" runat="server" />
+            <asp:TextBox ID="txtLocalidad" runat="server" class="form-control" type="text" Width="250px"></asp:TextBox>
+            <asp:Label Text="Telefono" runat="server" />
+            <asp:TextBox ID="txtTelefono" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
+            <asp:Label Text="Mail" runat="server" />
+            <asp:TextBox ID="txtMail" runat="server" class="form-control" type="text" Width="300px"></asp:TextBox>
+  </div>
+  <asp:Button ID="btnModificarCliente" runat="server" Text="Modificar" class="btn btn-warning" OnClick="btnModificarCliente_Click1"/>
+</form>
 
 </asp:Content>

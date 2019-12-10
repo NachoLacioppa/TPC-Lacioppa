@@ -241,5 +241,51 @@ namespace NEGOCIO
             return lista;
             //datos.cerrarConexion();
         }
+
+
+        //VALIDA ORDEN EN REPARACION
+        public Reparaciones ValidarOrden(string ord)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Reparaciones re = new Reparaciones();
+
+            datos.setearQuery("select id, idestado, orden from reparaciones where orden = @orden and idestado = 1");
+            datos.agregarParametro("@orden", ord);
+            datos.ejecutarLector();
+            if (datos.lector.Read())
+            {
+                re.id = datos.lector.GetInt32(0);
+                re.estados.id = datos.lector.GetInt32(1);
+                re.orden = datos.lector.GetInt64(2);
+            }
+            else
+            {
+                re = null;
+            }
+            return re;
+        }
+
+        public Reparaciones ValidarOrden1(string ord, Int32 estado)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Reparaciones re = new Reparaciones();
+
+            datos.setearQuery("select id, idestado, orden from reparaciones where orden = @orden and idestado = @idestado");
+            datos.agregarParametro("@orden", ord);
+            datos.agregarParametro("@idestado", estado);
+            datos.ejecutarLector();
+            if (datos.lector.Read())
+            {
+                re.id = datos.lector.GetInt32(0);
+                re.estados.id = datos.lector.GetInt32(1);
+                re.orden = datos.lector.GetInt64(2);
+            }
+            else
+            {
+                re = null;
+            }
+            return re;
+        }
     }
 }
+

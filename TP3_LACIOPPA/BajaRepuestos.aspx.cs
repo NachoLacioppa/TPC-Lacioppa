@@ -29,12 +29,12 @@ namespace TP3_LACIOPPA
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO EXISTE UN REPUESTOS CON ESE CODIGO');window.location ='BajaCliente.aspx';", true);
             }
             //ya esta eliminado
-            if (codigo.estado == false)
+            else if (codigo.estado == false)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('REPUESTO YA ELIMINADO');window.location ='BajaCliente.aspx';", true);
             }
             //existe y actualiza estado a cero
-            if (codigo.estado == true)
+            else if (codigo.estado == true)
             {
                 ren.bajaRepuestos(codigo);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert(' ELIMINADO!!!');window.location ='BajaCliente.aspx';", true);

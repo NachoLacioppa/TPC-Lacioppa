@@ -3,23 +3,28 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   <h2>AGREGAR NUEVO CLIENTE</h2>
-  <form>
-      <p>Nombre</p>
-      <asp:TextBox ID="txtnombre" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
-      <p>Apellido</p>
-      <asp:TextBox ID="txtApellido" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
-      <p>DNI</p>
-      <asp:TextBox ID="txtDNI" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
-      <p>Direccion</p>
-      <asp:TextBox ID="txtDireccion" runat="server" class="form-control" type="text" Width="250px"></asp:TextBox>
-      <p>Localidad</p>
-      <asp:TextBox ID="txtLocalidad" runat="server" class="form-control" type="text" Width="250px"></asp:TextBox>
-      <p>Telefono</p>
-      <asp:TextBox ID="txtTelefono" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
-      <p>Mail</p>
-      <asp:TextBox ID="txtMail" runat="server" class="form-control" type="text" Width="300px"></asp:TextBox>
-      <br />
-      <asp:Button ID="btnAgregarCliente" runat="server" class="btn btn-primary" Text="Cargar Cliente" OnClick="btnAgregarCliente_Click" />
-  </form>
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+            <asp:Label Text="Nombre" runat="server" />
+            <asp:TextBox ID="txtnombre" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
+            <asp:Label Text="Apellido" runat="server" />
+            <asp:TextBox ID="txtApellido" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
+            <asp:Label Text="DNI" runat="server" />
+            <asp:TextBox ID="txtDNI" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
+    </div>
+  </div>
+  <div class="form-group">
+    <asp:Label Text="Direccion" runat="server" />
+            <asp:TextBox ID="txtDireccion" runat="server" class="form-control" type="text" Width="250px"></asp:TextBox>
+            <asp:Label Text="Localidad" runat="server" />
+            <asp:TextBox ID="txtLocalidad" runat="server" class="form-control" type="text" Width="250px"></asp:TextBox>
+            <asp:Label Text="Telefono" runat="server" />
+            <asp:TextBox ID="txtTelefono" runat="server" class="form-control" type="text" Width="150px"></asp:TextBox>
+            <asp:Label Text="Mail" runat="server" />
+            <asp:TextBox ID="txtMail" runat="server" class="form-control" type="text" Width="300px"></asp:TextBox>
+  </div>
+  <asp:Button ID="btnAgregarCliente" runat="server" class="btn btn-primary" Text="Cargar Cliente" OnClick="btnAgregarCliente_Click" />
+</form>
 
 </asp:Content>

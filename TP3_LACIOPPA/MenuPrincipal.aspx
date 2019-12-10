@@ -69,9 +69,9 @@
      <li><a href="NuevaReparacion.aspx">Nueva Reparacion</a></li>
      <li>  <a href="FinalizarReparacion.aspx">Finalizar Reparacion</a></li>
      <li> <a href="ListarReparaciones.aspx">Listar Reparaciones</a></li>
+     <li> <a href="BusquedaOrden.aspx">Buscar Reparacion</a></li>
      <li> <a href="EquiposCargados.aspx">EQUIPOS CARGADOS</a></li>
       </div>
-
     </div>
     </div>
   </div>

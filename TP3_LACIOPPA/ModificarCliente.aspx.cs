@@ -14,9 +14,10 @@ namespace TP3_LACIOPPA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            btnModificarCliente.Enabled = false;
         }
 
+       
         protected void btnBuscarClienteMod_Click(object sender, EventArgs e)
         {
             ClienteNegocio clin = new ClienteNegocio();
@@ -32,29 +33,20 @@ namespace TP3_LACIOPPA
             txtTelefono.Text = cli.telefono;
             txtMail.Text = cli.mail;
 
+            btnModificarCliente.Enabled = true;
+
         }
 
-        //protected void btnModificarCliente_Click(object sender, EventArgs e)
-        //{
-        //    Clientes cli = new Clientes();
-        //    ClienteNegocio clin = new ClienteNegocio();
-
-        //    cli.nombre = txtnombre.Text;
-        //    cli.apellido = txtApellido.Text;
-        //    cli.dni = txtDNI.Text;
-        //    cli.direccion = txtDireccion.Text;
-        //    cli.localidad = txtLocalidad.Text;
-        //    cli.telefono = txtTelefono.Text;
-        //    cli.mail = txtMail.Text;
-
-        //    clin.ModificarCliente(cli);
-        //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('CLIENTE MODIFICADO');window.location ='MenuPrincipal.aspx';", true);
-        //}
 
         protected void btnModificarCliente_Click1(object sender, EventArgs e)
         {
             Clientes cli = new Clientes();
             ClienteNegocio clin = new ClienteNegocio();
+
+            if (string.IsNullOrEmpty(txtDNI.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('DNI NULO');window.location ='ModificarCliente.aspx';", true);
+            }
 
             cli.nombre = txtnombre.Text;
             cli.apellido = txtApellido.Text;

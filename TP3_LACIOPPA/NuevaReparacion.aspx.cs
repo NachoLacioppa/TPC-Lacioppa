@@ -17,7 +17,7 @@ namespace TP3_LACIOPPA
         {
             Reparaciones rep = new Reparaciones();
             ReparacionesNegocio repn = new ReparacionesNegocio();
-            txtOrden.Text = repn.BuscarOrden().ToString();
+            lblNumeroOrden.Text = repn.BuscarOrden().ToString();
 
             //Equipos eq = new Equipos();
             //EquipoNegocio eqn = new EquipoNegocio();
@@ -68,7 +68,7 @@ namespace TP3_LACIOPPA
 
                 EquipoNegocio eqn = new EquipoNegocio();
 
-                re.orden = Convert.ToInt64(txtOrden.Text);
+                re.orden = Convert.ToInt64(lblNumeroOrden.Text);
 
                 re.cliente = new Clientes();
                 re.cliente.id = Convert.ToInt32(txtidcliente.Text);

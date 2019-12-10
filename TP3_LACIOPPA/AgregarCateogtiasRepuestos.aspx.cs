@@ -23,6 +23,11 @@ namespace TP3_LACIOPPA
             CategoriaRepuestos cr = new CategoriaRepuestos();
             CategoriaRepuestosNegocios crn = new CategoriaRepuestosNegocios();
 
+            if (string.IsNullOrEmpty(txtCategoriaRepuesto.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('INGRESE ALGUNA CATEGORIA');window.location ='AgregarCateogtiasRepuestos.aspx';", true);
+            }
+
             cr.nombre = txtCategoriaRepuesto.Text;
 
             crn.altaCategoriaRepuesto(cr);
