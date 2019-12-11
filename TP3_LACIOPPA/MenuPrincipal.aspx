@@ -4,6 +4,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2>MENU PRINCIPAL</h2>
     <br />
+    <asp:Label Text="Bienvenido: " runat="server" />
+    <asp:Label Text="lblUsuario" runat="server" ID="lblUser"/>
     <div class="row">
 <!-- CLIENTES -->
         <div class="col-sm-3">
@@ -85,9 +87,7 @@
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
     Menu
   </button>
-
         <div class="collapse multi-collapse" id="multiCollapseExample3">
-      
          <li><a href="AltaTecnicos.aspx">Agregar Tecnico</a></li>
      <li>  <a href="BajaTecnicos.aspx">Eliminar Tecnico</a></li>
      <li> <a href="ModificarTecnico.aspx">Modificar Tecnico</a></li>

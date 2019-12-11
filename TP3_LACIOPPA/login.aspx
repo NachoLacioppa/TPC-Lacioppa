@@ -6,14 +6,16 @@
     <h4>LOGIN</h4>
     <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Usuario:</label>
-      <asp:TextBox ID="txtUsuario" runat="server" class="form-control" Width="150px" ></asp:TextBox>
+    <asp:Label Text="USUARIO:" runat="server" />
+      <asp:TextBox ID="txtUsuario" runat="server" class="form-control" Width="240px" ></asp:TextBox>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password:</label>
-    <asp:TextBox ID="txtPass" runat="server" class="form-control" Width="150px" ></asp:TextBox>
+    <asp:Label Text="CONTRASEÑA: " runat="server" />
+    <asp:TextBox ID="txtPass" runat="server" class="form-control" Width="240px" TextMode="Password"></asp:TextBox>
+     <asp:Label Text="USUARIO/CONTRASEÑA INCORRECTO" runat="server" ID="lblValidado" ForeColor="#FF0909" />
   </div>
-  <asp:Button ID="btnIngresar" runat="server" Text="Ingresar"  class="btn btn-primary" OnClick="btnIngresar_Click" />
-       
+        <br />
+  <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" class="btn btn-primary" OnClick="btnIngresar_Click"/>
+      <br />
 </form>
 </asp:Content>

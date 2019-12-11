@@ -207,5 +207,27 @@ namespace NEGOCIO
             }
             return lista;
         }
+
+        public Tecnicos ValidarUser(string user, string pass)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Tecnicos tec = new Tecnicos();
+
+            datos.setearQuery("select id ,usuario, contraseña from Tecnicos where usuario = @user and contraseña = @pass");
+            datos.agregarParametro("@user", user);
+            datos.agregarParametro("@pass", pass);
+            datos.ejecutarLector();
+            if (datos.lector.Read())
+            {
+                tec.ID = Convert.ToInt32(datos.lector["id"]);
+                tec.usuario = datos.lector["usuario"].ToString();
+                tec.contraseña = datos.lector["contraseña"].ToString();
+            }
+            else
+            {
+                tec = null;
+            }
+            return tec;
+        }
     }
 }

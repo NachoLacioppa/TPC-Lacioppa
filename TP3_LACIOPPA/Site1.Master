@@ -20,7 +20,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder> 
     <nav class="navbar navbar-dark bg-primary">
-  <a class="navbar-brand" href="MenuPrincipal.aspx">
+  <a class="navbar-brand" href="login.aspx">
       <img src="https://image.flaticon.com/icons/svg/28/28475.svg" alt="Alternate Text"  width="30" height="30" />
       IL TALLER
   </a>
