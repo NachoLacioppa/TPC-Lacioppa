@@ -123,6 +123,15 @@ namespace TP3_LACIOPPA
         protected global::System.Web.UI.WebControls.Label lblTecasignado;
 
         /// <summary>
+        /// Control lblFechaIng.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFechaIng;
+
+        /// <summary>
         /// Control lblinformefinal.
         /// </summary>
         /// <remarks>
@@ -157,6 +166,15 @@ namespace TP3_LACIOPPA
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView dwRepuestosUsados;
+
+        /// <summary>
+        /// Control lblFechaSal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFechaSal;
 
         /// <summary>
         /// Control lblpf.

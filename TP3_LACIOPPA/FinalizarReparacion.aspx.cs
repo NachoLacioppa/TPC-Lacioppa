@@ -37,10 +37,10 @@ namespace TP3_LACIOPPA
             Reparaciones rep = new Reparaciones();
             ReparacionesNegocio repn = new ReparacionesNegocio();
 
-            if (string.IsNullOrEmpty(txtCodigoRep.Text))
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO INGRESO NADA');window.location ='FinalizarReparacion.aspx';", true);
-            }
+            //if (string.IsNullOrEmpty(txtCodigoRep.Text))
+            //{
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO INGRESO NADA');window.location ='FinalizarReparacion.aspx';", true);
+            //}
 
             repa = repn.ValidarOrden(txtOrden.Text);
 

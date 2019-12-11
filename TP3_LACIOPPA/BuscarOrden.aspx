@@ -40,13 +40,16 @@
         <asp:Label Text="Modelo: " runat="server" />
         <asp:Label Text=" " runat="server" ID="lblEqModelo"/>
         <br />
-        <h3>PROBLEMA Y TECNICO ASIGNADO</h3>
+        <h3>PROBLEMA, TECNICO ASIGNADO Y FECHA DE INGRESO</h3>
         <asp:Label Text="Problema: " runat="server" />
         <br />
         <asp:TextBox ID="txtProblema" runat="server" Height="107px" Width="308px" TextMode="MultiLine" Rows=5 Enabled="false"></asp:TextBox>
         <br />
         <asp:Label Text="Tecnico Asignado: " runat="server" />
         <asp:Label Text=" " runat="server" ID="lblTecasignado"/>
+        <br />
+        <asp:Label Text="Fecha de Ingreso: " runat="server" />
+        <asp:Label Text=" " runat="server" ID="lblFechaIng"/>
     </div>
   </div>
     <br />
@@ -60,7 +63,10 @@
         <asp:TextBox ID="txtInforme" runat="server" Height="107px" Width="308px" TextMode="MultiLine" Rows=5 Enabled="false"></asp:TextBox>
         <br />
         <asp:Label Text="Repuestos Usados" runat="server" ID="lblRepuestosUsados"/>
-        <asp:GridView ID="dwRepuestosUsados" runat="server"></asp:GridView>
+        <asp:GridView ID="dwRepuestosUsados" runat="server" OnSelectedIndexChanged="dwRepuestosUsados_SelectedIndexChanged"></asp:GridView>
+        <br />
+        <asp:Label Text="Fecha de salida: " runat="server" />
+        <asp:Label Text=" " runat="server" ID="lblFechaSal"/>
         <br />
         <asp:Label Text="Presupuesto Final: " runat="server" ID="lblpf"/>
         <asp:Label Text=" " runat="server" ID="lblPreciofinal"/>

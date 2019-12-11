@@ -210,5 +210,39 @@ namespace NEGOCIO
             //datos.cerrarConexion();
         }
 
+        public List<Repuestos> listaRepuxRepa(string auxid)
+        {
+            //INSTANCIO LA LISTA
+            List<Repuestos> lista = new List<Repuestos>();
+            //DECLARO EL OBJETO
+            Repuestos aux;
+            Reparaciones aux1;
+            //INSTANCIO LA CONECCION A LA BASE
+            AccesoDatos datos = new AccesoDatos();
+            //TIRO LA QUERY
+            //datos.setearQuery("select codigo, nombre, cantidad, precio from repuestos where estado = 1");
+            datos.setearQuery("select repara.orden, repuxrepa.IDREPUESTO, repu.nombre, repu.precio from REPUESTOS_POR_REPARACIONES as repuxrepa inner join repuestos as repu on repuxrepa.IDREPUESTO = repu.id inner join REPARACIONES as repara on repuxrepa.IDREPARACIONES = repara.id where repara.id = @aux");
+            datos.agregarParametro("@aux", auxid);
+            //EJECUTO EL LECTOR
+            datos.ejecutarLector();
+
+            //MIENTRAS EL LECTOR LEA, DEVULVE LOS DATOS (DEBE COINSIDIR CON LA QUERY)
+
+            while (datos.lector.Read())
+            {
+                aux = new Repuestos();
+                aux1 = new Reparaciones();
+
+                aux1.orden = Convert.ToInt64(datos.lector["orden"]);
+                aux.id = Convert.ToInt32(datos.lector["idrepuesto"]);
+                aux.nombre = datos.lector["nombre"].ToString();
+                aux.precio = Convert.ToSingle(datos.lector["precio"]);
+
+                lista.Add(aux);
+            }
+            return lista;
+            //datos.cerrarConexion();
+        }
+
     }
 }
