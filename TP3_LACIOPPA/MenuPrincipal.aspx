@@ -2,12 +2,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>MENU PRINCIPAL</h2>
+    <center>
+            <h2>MENU PRINCIPAL</h2>
+    </center>
     <br />
-    <asp:Label Text="Bienvenido: " runat="server" Font-Size="X-Large" />
-    <asp:Label Text=" " runat="server" ID="lblUser" Font-Size="X-Large"/>
+        <asp:Label Text="Bienvenido: " runat="server" Font-Size="X-Large" />
+        <asp:Label Text=" " runat="server" ID="lblUser" Font-Size="X-Large"/>
     <br />
     <asp:label text=" " runat="server" ID="lblPerfilTecnico"/>
+    <br />
     <div class="row">
 <!-- CLIENTES -->
         <div class="col-sm-3">

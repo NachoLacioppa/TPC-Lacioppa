@@ -2,7 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>LISTAR TODOS LOS REPUESTOS</h2>
+    <center>
+        <h2>LISTAR TODOS LOS REPUESTOS</h2>
+    </center>
+    
     <table class="table">
         <thead class="thead-dark">
             <tr>

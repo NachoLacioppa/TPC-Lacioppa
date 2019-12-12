@@ -3,7 +3,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <form>
-    <h2>MODIFICAR CLIENTE</h2>
+    <center>
+        <h2>MODIFICAR CLIENTE</h2>
+    </center>
+    
      <div class="form-row">
     <div class="form-group col-md-6">
         <asp:Label Text="Buscar cliente (solo dni)" runat="server" />

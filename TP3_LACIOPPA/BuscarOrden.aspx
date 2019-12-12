@@ -3,13 +3,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <form>
-    <h2>BUSCAR ORDEN ESPESIFICA</h2>
-
+    <center>
+        <h2>BUSCAR ORDEN ESPESIFICA</h2>
+    </center>
     <%--BUSQUEDA ESPESIFICA DE ORDEN--%>
      <div class="form-row">
     <div class="form-group col-md-6">
         <asp:label text="Ingrese Numero de Orden" runat="server" />
-        <asp:TextBox ID="txtBuscarOrden" runat="server" class="form-control" Width="150px"></asp:TextBox>
+        <asp:TextBox ID="txtBuscarOrden" runat="server" class="form-control" Width="150px" TextMode="Number"></asp:TextBox>
         <br />
         <asp:Button ID="btnBuscarOrden" runat="server" class="btn btn-primary" Text="Buscar Orden" OnClick="btnBuscarOrden_Click" />
         <asp:TextBox ID="txtIDORDEN" runat="server" Visible="false"></asp:TextBox>

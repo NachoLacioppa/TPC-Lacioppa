@@ -114,6 +114,15 @@ namespace TP3_LACIOPPA
         protected global::System.Web.UI.WebControls.Button btnBuscarEquipo;
 
         /// <summary>
+        /// Control lblEquipo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEquipo;
+
+        /// <summary>
         /// Control txtMarca.
         /// </summary>
         /// <remarks>

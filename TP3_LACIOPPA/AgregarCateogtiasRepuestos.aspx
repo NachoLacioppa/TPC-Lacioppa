@@ -2,7 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>AGREGAR CATEGORIA DE REPUESTO</h2>
+    <center>
+        <h2>AGREGAR CATEGORIA DE REPUESTO</h2>
+    </center>
     <br />
     <p>Nombre de Categoria</p>
     <asp:TextBox ID="txtCategoriaRepuesto" runat="server" class="form-control" Width="150px" ></asp:TextBox>

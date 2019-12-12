@@ -2,20 +2,29 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />  
-    <h4>LOGIN</h4>
+
     <form>
-  <div class="form-group">
+<div class="card text-center">
+  <div class="card-header">
+    Bienvenido a IL TALLER
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">INGRESE SUS CREDENCIALES</h5>
     <asp:Label Text="USUARIO:" runat="server" />
-      <asp:TextBox ID="txtUsuario" runat="server" class="form-control" Width="240px" ></asp:TextBox>
-  </div>
-  <div class="form-group">
+    <center>
+<asp:TextBox ID="txtUsuario" runat="server" class="form-control" Width="250px"></asp:TextBox>
+    </center>
+    <br />
     <asp:Label Text="CONTRASEÑA: " runat="server" />
-    <asp:TextBox ID="txtPass" runat="server" class="form-control" Width="240px" TextMode="Password"></asp:TextBox>
-     <asp:Label Text="USUARIO/CONTRASEÑA INCORRECTO" runat="server" ID="lblValidado" ForeColor="#FF0909" />
+      <center>
+          <asp:TextBox ID="txtPass" runat="server" class="form-control" TextMode="Password" Width="250px"></asp:TextBox>
+      </center>
+    <br />
+    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" class="btn btn-primary" OnClick="btnIngresar_Click"/>
   </div>
-        <br />
-  <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" class="btn btn-primary" OnClick="btnIngresar_Click"/>
-      <br />
+  <div class="card-footer text-muted">
+    <asp:Label Text="USUARIO/CONTRASEÑA INCORRECTO" runat="server" ID="lblValidado" ForeColor="#FF0909" />
+  </div>
+</div>
 </form>
 </asp:Content>

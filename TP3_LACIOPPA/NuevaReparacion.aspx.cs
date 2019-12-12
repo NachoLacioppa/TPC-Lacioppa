@@ -18,6 +18,9 @@ namespace TP3_LACIOPPA
             ReparacionesNegocio repn = new ReparacionesNegocio();
             lblNumeroOrden.Text = repn.BuscarOrden().ToString();
             lblperfiltec.Text = (string)Session["PerfilTecnico"].ToString();
+            txtMarca.Enabled = false;
+            txtModelo.Enabled = false;
+            lblEquipo.Visible = false;
             if(Convert.ToInt32(lblperfiltec.Text) != 1)
             {
 
@@ -33,6 +36,7 @@ namespace TP3_LACIOPPA
                 dwTecnico.DataValueField = "id";
                 dwTecnico.DataSource = negocio.listarUsers();
                 dwTecnico.DataBind();
+ 
             }
 
 
@@ -58,10 +62,23 @@ namespace TP3_LACIOPPA
             EquipoNegocio eqn = new EquipoNegocio();
 
             eq = eqn.BuscarCodigo(txtNumeroSerie.Text);
+
             txtidequipo.Text = eqn.BuscarIDEquipo().ToString();
             txtidequipo.Text = Convert.ToInt32(eq.id).ToString();
-            txtMarca.Text = eq.marca;
-            txtModelo.Text = eq.modelo;
+            if(Convert.ToInt32(txtidequipo.Text) == 0)
+            {
+
+                txtMarca.Enabled = true;
+                txtModelo.Enabled = true;
+                lblEquipo.Visible = true;
+                txtMarca.Text = eq.marca;
+                txtModelo.Text = eq.modelo;
+            }
+            else
+            {
+                txtMarca.Text = eq.marca;
+                txtModelo.Text = eq.modelo;
+            }
         }
 
         public Equipos sn;

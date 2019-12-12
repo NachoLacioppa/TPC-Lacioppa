@@ -2,7 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <h2>NUEVA REPARACION</h2>
+    <center>
+             <h2>NUEVA REPARACION</h2>
+    </center>
+
     <asp:Label Text=" " runat="server" ID="lblperfiltec" Visible="false"/>
 <form>
     <%--AUTONUMERICO ORDEN--%>
@@ -17,7 +20,7 @@
     <%--BUSQUEDA DE CLIENTE POR DNI--%>
   <div class="form-group">
     <div class="form-group col-md-6">
-        <asp:Label Text="Buscar Tecnico (solo por dni)" runat="server" />
+        <asp:Label Text="Buscar Cliente (solo por dni)" runat="server" />
          <asp:TextBox ID="txtCliente" runat="server" class="form-control" placeholder="DNI" Width="150px"></asp:TextBox>
         <br />
         <asp:Button ID="btnBuscarCliente" runat="server" Text="Buscar Cliente" class="btn btn-primary" OnClick="btnBuscarCliente_Click" />
@@ -38,8 +41,10 @@
     <asp:TextBox ID="txtNumeroSerie" runat="server" class="form-control" placeholder="Numero de Serie" Width="250px"></asp:TextBox>
         <br />
     <asp:Button ID="btnBuscarEquipo" runat="server" Text="Buscar Equipo" class="btn btn-primary" OnClick="btnBuscarEquipo_Click" />
+        <asp:Label Text="EL EQUIPO NO EXISTTE, POR FAVOR CARGUE LA MARCA Y EL MODELO" runat="server" ID="lblEquipo"/>
     <br />
     <asp:TextBox ID="txtMarca" runat="server" class="form-control" placeholder="Marca" Width="250px"></asp:TextBox>
+        <br />
     <asp:TextBox ID="txtModelo" runat="server" class="form-control" placeholder="Modelo" Width="250px"></asp:TextBox>
     </div>
   </div>

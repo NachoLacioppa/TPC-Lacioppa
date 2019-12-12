@@ -2,7 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <h2>AGREGAR NUEVO TECNICO</h2>
+    <center>
+        <h2>AGREGAR NUEVO TECNICO</h2>
+    </center>
 <form>
   <div class="form-row">
     <div class="form-group col-md-6">

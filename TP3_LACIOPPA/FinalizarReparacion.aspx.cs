@@ -22,6 +22,7 @@ namespace TP3_LACIOPPA
             btnAgregarRepuesto.Enabled = false;
             lblVerificaRepuesto.Visible = false;
 
+
             if (!IsPostBack)
             {
                 Session["ListaRepuestos"] = null;

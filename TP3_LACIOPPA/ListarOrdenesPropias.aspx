@@ -2,7 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>MIS REPARACIONES</h2>
+    <center>
+        <h2>MIS REPARACIONES</h2>
+    </center>
+    
     <asp:Label Text=" " runat="server" ID="lblidtecnico"/>
     <br />
     <h3>EN REPARACION</h3>
