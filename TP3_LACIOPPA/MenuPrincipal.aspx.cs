@@ -18,12 +18,15 @@ namespace TP3_LACIOPPA
             lblPerfilTecnico.Visible = false;
             lblPerfilTecnico.Text = (string)Session["PerfilTecnico"].ToString();
             lblUser.Text = (string)Session["UsuarioTecnico"];
-            if (Convert.ToInt32(lblPerfilTecnico.Text) != 1)
+            if (Convert.ToInt32(lblPerfilTecnico.Text) == 2)
             {
                 btnTec.Disabled = true;
+                lstReparaciones.Visible = false;
             }
             if (Convert.ToInt32(lblPerfilTecnico.Text) == 3)
             {
+                btnTec.Disabled = true;
+                lstReparaciones.Visible = false;
                 btnRepuestos.Disabled = true;
             }
         }

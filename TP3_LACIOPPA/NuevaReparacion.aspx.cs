@@ -11,17 +11,20 @@ namespace TP3_LACIOPPA
 {
     public partial class NuevaReparacion : System.Web.UI.Page
     {
-        //Equipos eq = new Equipos();
-        //EquipoNegocio eqn = new EquipoNegocio();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             Reparaciones rep = new Reparaciones();
             ReparacionesNegocio repn = new ReparacionesNegocio();
             lblNumeroOrden.Text = repn.BuscarOrden().ToString();
+            lblperfiltec.Text = (string)Session["PerfilTecnico"].ToString();
+            if(Convert.ToInt32(lblperfiltec.Text) != 1)
+            {
 
-            //Equipos eq = new Equipos();
-            //EquipoNegocio eqn = new EquipoNegocio();
-            //txtidequipo.Text = eqn.BuscarIDEquipo().ToString();
+                dwTecnico.Visible = false;
+                lblusuarioTec.Text = (string)Session["UsuarioTecnico"].ToString();
+                lblIDTec.Text = (string)Session["IDTecnico"].ToString();
+            }
 
             if (!IsPostBack)
             {
@@ -31,6 +34,9 @@ namespace TP3_LACIOPPA
                 dwTecnico.DataSource = negocio.listarUsers();
                 dwTecnico.DataBind();
             }
+
+
+
 
         }
 
@@ -95,8 +101,18 @@ namespace TP3_LACIOPPA
 
                 re.problema = txtProblema.Text;
 
-                re.tecnico = new Tecnicos();
-                re.tecnico.ID = Convert.ToInt32(dwTecnico.SelectedItem.Value);
+                if (Convert.ToInt32(lblperfiltec.Text) != 1)
+                {
+                    re.tecnico = new Tecnicos();
+                    re.tecnico.ID = Convert.ToInt32(lblIDTec.Text);
+                    re.tecnico.usuario = lblusuarioTec.Text;
+                }
+                else
+                {
+                    
+                    re.tecnico = new Tecnicos();
+                    re.tecnico.ID = Convert.ToInt32(dwTecnico.SelectedItem.Value);
+                }
 
                 ren.NuevaReparacion(re);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NUEVA REPARACION CONFIRMADA');window.location = 'MenuPrincipal.aspx';", true);              

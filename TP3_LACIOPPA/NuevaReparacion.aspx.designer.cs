@@ -15,6 +15,15 @@ namespace TP3_LACIOPPA
     {
 
         /// <summary>
+        /// Control lblperfiltec.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblperfiltec;
+
+        /// <summary>
         /// Control lblNumeroOrden.
         /// </summary>
         /// <remarks>
@@ -132,6 +141,15 @@ namespace TP3_LACIOPPA
         protected global::System.Web.UI.WebControls.TextBox txtProblema;
 
         /// <summary>
+        /// Control lblusuarioTec.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblusuarioTec;
+
+        /// <summary>
         /// Control dwTecnico.
         /// </summary>
         /// <remarks>
@@ -139,6 +157,15 @@ namespace TP3_LACIOPPA
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dwTecnico;
+
+        /// <summary>
+        /// Control lblIDTec.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIDTec;
 
         /// <summary>
         /// Control btnCargarReparacion.

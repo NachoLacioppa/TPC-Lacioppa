@@ -71,7 +71,7 @@
         <div class="collapse multi-collapse" id="multiCollapseExample4">
      <li><a href="NuevaReparacion.aspx">Nueva Reparacion</a></li>
      <li>  <a href="FinalizarReparacion.aspx">Finalizar Reparacion</a></li>
-     <li> <a href="ListarReparaciones.aspx">Listar Reparaciones</a></li>
+     <li> <a runat="server" id="lstReparaciones" href="ListarReparaciones.aspx">Listar Reparaciones</a></li>
      <li> <a href="BuscarOrden.aspx">Buscar Reparacion</a></li>
      <li>  <a href="ListarOrdenesPropias.aspx">MIS REPARACIONES</a></li>
      <li> <a href="EquiposCargados.aspx">EQUIPOS CARGADOS</a></li>

@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <h2>NUEVA REPARACION</h2>
+    <asp:Label Text=" " runat="server" ID="lblperfiltec" Visible="false"/>
 <form>
     <%--AUTONUMERICO ORDEN--%>
   <div class="form-row">
@@ -52,9 +53,11 @@
         <br />
         <br />
         <asp:Label Text="Tecnico Asignado" runat="server" />
+        <asp:Label Text=" " runat="server" ID="lblusuarioTec"/>
         <br />
         <br />
         <asp:DropDownList ID="dwTecnico" runat="server" class="btn btn-secondary btn-sm dropdown-toggle"></asp:DropDownList>
+        <asp:Label Text=" " runat="server" ID="lblIDTec" Visible="false"/>
         <br />
         <br />
         <asp:Button ID="btnCargarReparacion" runat="server" Text="Carga Reparacion" class="btn btn-primary" OnClick="btnCargarReparacion_Click" />

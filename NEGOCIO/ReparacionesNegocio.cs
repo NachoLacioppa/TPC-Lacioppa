@@ -407,9 +407,9 @@ namespace NEGOCIO
                 aux.equipo.marca = datos.lector["MARCA"].ToString();
                 aux.equipo.modelo = datos.lector["MODELO"].ToString();
                 aux.problema = datos.lector["PROBLEMA"].ToString();
-                aux.informe = datos.lector["INFORME"].ToString();
+                //aux.informe = datos.lector["INFORME"].ToString();
                 aux.fecha_entrada = Convert.ToDateTime(datos.lector["FECHA_ENTRADA"]);
-                aux.fecha_salida = Convert.ToDateTime(datos.lector["FECHA_SALIDA"]);
+                //aux.fecha_salida = Convert.ToDateTime(datos.lector["FECHA_SALIDA"]);
 
                 lista.Add(aux);
             }
