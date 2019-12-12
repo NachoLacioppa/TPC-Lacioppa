@@ -4,8 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2>MENU PRINCIPAL</h2>
     <br />
-    <asp:Label Text="Bienvenido: " runat="server" />
-    <asp:Label Text="lblUsuario" runat="server" ID="lblUser"/>
+    <asp:Label Text="Bienvenido: " runat="server" Font-Size="X-Large" />
+    <asp:Label Text=" " runat="server" ID="lblUser" Font-Size="X-Large"/>
+    <br />
+    <asp:label text=" " runat="server" ID="lblPerfilTecnico"/>
     <div class="row">
 <!-- CLIENTES -->
         <div class="col-sm-3">
@@ -14,9 +16,8 @@
     <div class="card-body">
     <h5 class="card-title">Clientes</h5>
 
-   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
-    Menu
-  </button>
+   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Menu</button>
+    
         <div class="collapse multi-collapse" id="multiCollapseExample1">
       
          <li><a href="AltaCliente.aspx">Agregar Cliente</a></li>
@@ -38,7 +39,7 @@
     <div class="card-body">
     <h5 class="card-title">Repuestos</h5>
 
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+    <button id="btnRepuestos" runat="server" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
     Menu
   </button>
 
@@ -72,6 +73,7 @@
      <li>  <a href="FinalizarReparacion.aspx">Finalizar Reparacion</a></li>
      <li> <a href="ListarReparaciones.aspx">Listar Reparaciones</a></li>
      <li> <a href="BuscarOrden.aspx">Buscar Reparacion</a></li>
+     <li>  <a href="ListarOrdenesPropias.aspx">MIS REPARACIONES</a></li>
      <li> <a href="EquiposCargados.aspx">EQUIPOS CARGADOS</a></li>
       </div>
     </div>
@@ -84,7 +86,7 @@
     <div class="card-body">
     <h5 class="card-title">Tecnicos</h5>
 
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+        <button id="btnTec" runat="server" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
     Menu
   </button>
         <div class="collapse multi-collapse" id="multiCollapseExample3">
@@ -92,7 +94,7 @@
      <li>  <a href="BajaTecnicos.aspx">Eliminar Tecnico</a></li>
      <li> <a href="ModificarTecnico.aspx">Modificar Tecnico</a></li>
      <li>  <a href="BusquedaTecnicos.aspx">Listar Tecnicos</a></li>
-     <li>  <a href="AgregarPerfilesTecnicos.aspx">PERFILES</a></li>
+     <%--<li>  <a href="AgregarPerfilesTecnicos.aspx">PERFILES</a></li>--%>
       
     </div>
 

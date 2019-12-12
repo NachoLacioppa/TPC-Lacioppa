@@ -14,6 +14,8 @@ namespace TP3_LACIOPPA
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["UsuarioTecnico"] = null;
+            Session["IDTecnico"] = null;
+            Session["PerfilTecnico"] = null;
             lblValidado.Visible = false;
         }
 
@@ -29,6 +31,12 @@ namespace TP3_LACIOPPA
             }
             else if (tec1 != null)
             {
+                Session["IDTecnico"] = tec1.ID;
+                Session["UsuarioTecnico"] = tec1.usuario;
+                Session["PerfilTecnico"] = tec1.perfil.id;
+                Session.Add("IDTecnico", tec1.ID);
+                Session.Add("PerfilTecnico",tec1.perfil.id);
+                Session.Add("UsuarioTecnico", tec1.usuario);
                 Response.Redirect("~/MenuPrincipal.aspx");
             }
         }

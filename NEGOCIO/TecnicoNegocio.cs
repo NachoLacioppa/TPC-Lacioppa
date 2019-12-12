@@ -213,7 +213,7 @@ namespace NEGOCIO
             AccesoDatos datos = new AccesoDatos();
             Tecnicos tec = new Tecnicos();
 
-            datos.setearQuery("select id ,usuario, contraseña from Tecnicos where usuario = @user and contraseña = @pass");
+            datos.setearQuery("select id ,usuario, contraseña, idperfil from Tecnicos where usuario = @user and contraseña = @pass");
             datos.agregarParametro("@user", user);
             datos.agregarParametro("@pass", pass);
             datos.ejecutarLector();
@@ -222,6 +222,8 @@ namespace NEGOCIO
                 tec.ID = Convert.ToInt32(datos.lector["id"]);
                 tec.usuario = datos.lector["usuario"].ToString();
                 tec.contraseña = datos.lector["contraseña"].ToString();
+                tec.perfil = new PerfilesTecnicos();
+                tec.perfil.id = Convert.ToInt32(datos.lector["idperfil"]);
             }
             else
             {

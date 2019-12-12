@@ -377,7 +377,84 @@ namespace NEGOCIO
             return re;
         }
 
-       
+        //en reparacion
+        public List<Reparaciones> listarRep3(string idtec)
+        {
+            //INSTANCIO LA LISTA
+            List<Reparaciones> lista = new List<Reparaciones>();
+            //DECLARO EL OBJETO
+            Reparaciones aux;
+            //INSTANCIO LA CONECCION A LA BASE
+            AccesoDatos datos = new AccesoDatos();
+            //TIRO LA QUERY
+            datos.setearQuery("SELECT R.ORDEN, CLI.NOMBRE, CLI.APELLIDO, CLI.TELEFONO, EQ.MARCA, EQ.MODELO, R.PROBLEMA, R.FECHA_ENTRADA FROM REPARACIONES AS R INNER JOIN CLIENTES AS CLI ON R.IDCLIENTE = CLI.ID INNER JOIN ESTADOS_REPARACION AS ER ON R.IDESTADO = ER.ID INNER JOIN EQUIPOS AS EQ ON R.IDEQUIPO = EQ.ID WHERE ER.ID = 1 and R.IDTECNICO = @IDTEC");
+            datos.agregarParametro("@IDTEC",idtec);
+            //EJECUTO EL LECTOR
+            datos.ejecutarLector();
+
+            //MIENTRAS EL LECTOR LEA, DEVULVE LOS DATOS (DEBE COINSIDIR CON LA QUERY)
+
+            while (datos.lector.Read())
+            {
+                aux = new Reparaciones();
+                aux.cliente = new Clientes();
+                aux.equipo = new Equipos();
+
+                aux.orden = Convert.ToInt64(datos.lector["ORDEN"]);
+                aux.cliente.nombre = datos.lector["NOMBRE"].ToString();
+                aux.cliente.apellido = datos.lector["APELLIDO"].ToString();
+                aux.cliente.telefono = datos.lector["TELEFONO"].ToString();
+                aux.equipo.marca = datos.lector["MARCA"].ToString();
+                aux.equipo.modelo = datos.lector["MODELO"].ToString();
+                aux.problema = datos.lector["PROBLEMA"].ToString();
+                aux.informe = datos.lector["INFORME"].ToString();
+                aux.fecha_entrada = Convert.ToDateTime(datos.lector["FECHA_ENTRADA"]);
+                aux.fecha_salida = Convert.ToDateTime(datos.lector["FECHA_SALIDA"]);
+
+                lista.Add(aux);
+            }
+            return lista;
+            //datos.cerrarConexion();
+        }
+        //finalizadas
+        public List<Reparaciones> listarRep4(string idtec)
+        {
+            //INSTANCIO LA LISTA
+            List<Reparaciones> lista = new List<Reparaciones>();
+            //DECLARO EL OBJETO
+            Reparaciones aux;
+            //INSTANCIO LA CONECCION A LA BASE
+            AccesoDatos datos = new AccesoDatos();
+            //TIRO LA QUERY
+            datos.setearQuery("SELECT R.ORDEN, CLI.NOMBRE, CLI.APELLIDO, CLI.TELEFONO, EQ.MARCA, EQ.MODELO, R.PROBLEMA, R.INFORME, R.FECHA_ENTRADA, R.FECHA_SALIDA FROM REPARACIONES AS R INNER JOIN CLIENTES AS CLI ON R.IDCLIENTE = CLI.ID INNER JOIN ESTADOS_REPARACION AS ER ON R.IDESTADO = ER.ID INNER JOIN EQUIPOS AS EQ ON R.IDEQUIPO = EQ.ID WHERE ER.ID = 2 and R.IDTECNICO = @IDTEC");
+            datos.agregarParametro("@IDTEC",idtec);
+            //EJECUTO EL LECTOR
+            datos.ejecutarLector();
+
+            //MIENTRAS EL LECTOR LEA, DEVULVE LOS DATOS (DEBE COINSIDIR CON LA QUERY)
+
+            while (datos.lector.Read())
+            {
+                aux = new Reparaciones();
+                aux.cliente = new Clientes();
+                aux.equipo = new Equipos();
+
+                aux.orden = Convert.ToInt64(datos.lector["ORDEN"]);
+                aux.cliente.nombre = datos.lector["NOMBRE"].ToString();
+                aux.cliente.apellido = datos.lector["APELLIDO"].ToString();
+                aux.cliente.telefono = datos.lector["TELEFONO"].ToString();
+                aux.equipo.marca = datos.lector["MARCA"].ToString();
+                aux.equipo.modelo = datos.lector["MODELO"].ToString();
+                aux.problema = datos.lector["PROBLEMA"].ToString();
+                aux.informe = datos.lector["INFORME"].ToString();
+                aux.fecha_entrada = Convert.ToDateTime(datos.lector["FECHA_ENTRADA"]);
+                aux.fecha_salida = Convert.ToDateTime(datos.lector["FECHA_SALIDA"]);
+
+                lista.Add(aux);
+            }
+            return lista;
+            //datos.cerrarConexion();
+        }
     }
 }
 
