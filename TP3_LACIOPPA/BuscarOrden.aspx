@@ -4,13 +4,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <form>
     <center>
-        <h2>BUSCAR ORDEN ESPESIFICA</h2>
+        <h2>BUSCAR ORDEN ESPECIFICA</h2>
     </center>
     <%--BUSQUEDA ESPESIFICA DE ORDEN--%>
      <div class="form-row">
     <div class="form-group col-md-6">
         <asp:label text="Ingrese Numero de Orden" runat="server" />
         <asp:TextBox ID="txtBuscarOrden" runat="server" class="form-control" Width="150px" TextMode="Number"></asp:TextBox>
+        <asp:Label Text="INGRESE EL NUMERO DE ORDEN" ID="lblIngreseNumeroOrden" runat="server" Font-Size="X-Large" ForeColor="#F00006" />
         <br />
         <asp:Button ID="btnBuscarOrden" runat="server" class="btn btn-primary" Text="Buscar Orden" OnClick="btnBuscarOrden_Click" />
         <asp:TextBox ID="txtIDORDEN" runat="server" Visible="false"></asp:TextBox>
@@ -69,8 +70,9 @@
         <asp:Label Text="Fecha de salida: " runat="server" />
         <asp:Label Text=" " runat="server" ID="lblFechaSal"/>
         <br />
-        <asp:Label Text="Presupuesto Final: " runat="server" ID="lblpf"/>
-        <asp:Label Text=" " runat="server" ID="lblPreciofinal"/>
+        <asp:Label Text="Presupuesto Final: " runat="server" ID="lblpf" ForeColor="Blue" Font-Size="X-Large"/>
+        <asp:Label Text=" " runat="server" ID="lblPreciofinal" ForeColor="Blue" Font-Size="X-Large" />
+        <asp:Label Text="$" runat="server" ForeColor="Blue" Font-Size="X-Large"/>
     </div>
   </div>
 </form>

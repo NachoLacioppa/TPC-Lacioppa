@@ -29,6 +29,7 @@ namespace TP3_LACIOPPA
                 btnFinalizarOrden.Enabled = false;
                 btnAgregarRepuesto.Enabled = false;
                 lblVerificaRepuesto.Visible = false;
+                lblingresoorden.Visible = false;
 
 
                 if (!IsPostBack)
@@ -150,22 +151,30 @@ namespace TP3_LACIOPPA
 
         protected void btnCalcularTotal_Click(object sender, EventArgs e)
         {
-            if (acum == 0)
+            if (string.IsNullOrEmpty(txtCodigoRep.Text))
             {
-                ManoObra = Convert.ToDouble(txtPrecioManoObra.Text);
-                acumTotal = 0 + ManoObra;
-                Session.Add("PresupuestoTotal", acumTotal);
-                txtPrecioTotal.Text = Convert.ToDouble(acumTotal).ToString();
-                btnFinalizarOrden.Enabled = true;
+                lblingresoorden.Visible = true;
             }
             else
             {
-                ManoObra = Convert.ToDouble(txtPrecioManoObra.Text);
-                acumTotal = acum + ManoObra;
-                Session.Add("PresupuestoTotal", acumTotal);
-                txtPrecioTotal.Text = Convert.ToDouble(acumTotal).ToString();
-                btnFinalizarOrden.Enabled = true;
+                if (acum == 0)
+                {
+                    ManoObra = Convert.ToDouble(txtPrecioManoObra.Text);
+                    acumTotal = 0 + ManoObra;
+                    Session.Add("PresupuestoTotal", acumTotal);
+                    txtPrecioTotal.Text = Convert.ToDouble(acumTotal).ToString();
+                    btnFinalizarOrden.Enabled = true;
+                }
+                else
+                {
+                    ManoObra = Convert.ToDouble(txtPrecioManoObra.Text);
+                    acumTotal = acum + ManoObra;
+                    Session.Add("PresupuestoTotal", acumTotal);
+                    txtPrecioTotal.Text = Convert.ToDouble(acumTotal).ToString();
+                    btnFinalizarOrden.Enabled = true;
+                }
             }
+            
         }
 
         protected void btnFinalizarOrden_Click(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace TP3_LACIOPPA
 {
     public partial class BusquedaTecnicos : System.Web.UI.Page
     {
-        public List<Tecnicos> listarTecnicos { get; set; }
+        
         int validacion = 0;
         string validacion1 = null;
         protected void Page_Load(object sender, EventArgs e)
@@ -23,6 +23,7 @@ namespace TP3_LACIOPPA
             }
             else
             {
+
                 validacion = (int)Session["PerfilTecnico"];
                 if (validacion != 1)
                 {
@@ -33,5 +34,6 @@ namespace TP3_LACIOPPA
             }
             
         }
+        public List<Tecnicos> listarTecnicos { get; set; }
     }
 }

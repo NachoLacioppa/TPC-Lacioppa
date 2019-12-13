@@ -19,6 +19,7 @@ namespace TP3_LACIOPPA
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('PRIMERO LOGUEATE');window.location ='login.aspx';", true);
             }
+            lblIngreseNumeroOrden.Visible = false;
             Ocultar_TODO();
         }
 
@@ -74,10 +75,11 @@ namespace TP3_LACIOPPA
 
             Repuestos repu = new Repuestos();
             RepuestosNegocio repun = new RepuestosNegocio();
+            
 
             if (string.IsNullOrEmpty(txtBuscarOrden.Text))
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO INGRESO NADA EN LA BUSQUEDA');window.location ='BuscarOrden.aspx';", true);
+                lblIngreseNumeroOrden.Visible = true;
             }
 
             //rep = repn.BuscarReparacion_ESPESIFICA(txtBuscarOrden.Text);
@@ -145,6 +147,7 @@ namespace TP3_LACIOPPA
                 lista.Add(repu);
                 dwRepuestosUsados.DataSource = lista;
                 dwRepuestosUsados.DataBind();
+
                 //dwRepuestosUsados.Columns[0].Visible = false;
 
             }

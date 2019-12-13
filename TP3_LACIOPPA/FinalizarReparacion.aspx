@@ -75,21 +75,27 @@
     <div class="form-group col-md-6">
        <asp:Label Text="Ingrese codigo del repuesto: " runat="server" />
         <asp:TextBox ID="txtCodigoRep" runat="server" class="form-control" Width="150px" Enabled="true" ></asp:TextBox>
+        <br />
         <asp:Button ID="btnBuscarRepuesto" runat="server" Text="Buscar Repuesto" class="btn btn-primary" OnClick="btnBuscarRepuesto_Click" />
         <asp:Label Text="POR FAVOR INGRESE UN CODIGO DE REPUESTO ANTES DE APRETAR EL BOTON REPUESTO!!!!!" runat="server" ID="lblVerificaRepuesto"/>
         <br />
-        <asp:Label Text="Nombre del repuesto: " runat="server" />
+        <br />
         <asp:TextBox ID="txtIDRepuesto" runat="server" Visible="false"></asp:TextBox>
+        <asp:Label Text="Nombre del repuesto: " runat="server" />
         <asp:TextBox ID="txtNompreRep" runat="server" class="form-control" Width="350px" Enabled="false" ></asp:TextBox>
+        <br />
+        <br />
         <asp:Label Text="Precio: " runat="server" />
         <asp:TextBox ID="txtPrecioRepuesto" runat="server" class="form-control" Width="150px" Enabled="false" ></asp:TextBox>
+        <br />
+        <br />
         <asp:Button ID="btnAgregarRepuesto" runat="server" Text="Agregar Repuesto" class="btn btn-primary" OnClick="btnAgregarRepuesto_Click" />
+        <br />
         <br />
         <asp:GridView ID="gvDatosRepuestos" runat="server"></asp:GridView>
         <br />
         <asp:Label Text="Precio acumulable de los repuestos:" runat="server" />
         <asp:TextBox ID="txtPrecioAcumulativoRepuestos" runat="server" class="form-control" Width="150px" Enabled="false" Text="0"></asp:TextBox>
-       
         <br />
     </div>
   </div>
@@ -101,6 +107,7 @@
         <asp:Label Text="PRESUPUESTO MANO DE OBRA" runat="server" />
         <asp:TextBox ID="txtPrecioManoObra" runat="server" class="form-control" Width="150px" Enabled="true" ></asp:TextBox>
         <asp:Button ID="btnCalcularTotal" runat="server" Text="Calcular Presupuesto" class="btn btn-secondary" OnClick="btnCalcularTotal_Click" />
+        <asp:Label Text="NO SE INGRESO UNA ORDEN DE REPARACION" runat="server" ForeColor="#FF0F0F" ID="lblingresoorden"/>  
     <br />
     <asp:Label Text="PRESUPUESTO TOTAL: " runat="server" />
     <asp:TextBox ID="txtPrecioTotal" runat="server" class="form-control" Width="150px" Enabled="false" Text="0"></asp:TextBox>

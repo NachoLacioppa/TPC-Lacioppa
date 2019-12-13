@@ -17,7 +17,6 @@
     <br />
     <asp:Label Text="CONTRASEÑA: " runat="server" />
       <center>
-            
           <asp:TextBox ID="txtPass" runat="server" class="form-control" TextMode="Password" Width="250px"></asp:TextBox>
       </center>
     <br />
