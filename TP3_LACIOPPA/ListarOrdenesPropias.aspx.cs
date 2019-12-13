@@ -13,15 +13,23 @@ namespace TP3_LACIOPPA
     {
         public List<Reparaciones> lista3 { get; set; }
         public List<Reparaciones> lista4 { get; set; }
+        string validacion1 = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            ReparacionesNegocio rpn = new ReparacionesNegocio();
-            lblidtecnico.Visible = false;
-            lblidtecnico.Text = (string)Session["IDTecnico"].ToString();
+            validacion1 = (string)Session["UsuarioTecnico"];
+            if (validacion1 == null)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('PRIMERO LOGUEATE');window.location ='login.aspx';", true);
+            }
+            else
+            {
+                ReparacionesNegocio rpn = new ReparacionesNegocio();
+                lblidtecnico.Visible = false;
+                lblidtecnico.Text = (string)Session["IDTecnico"].ToString();
 
-            lista3 = rpn.listarRep3(lblidtecnico.Text);
-            lista4 = rpn.listarRep4(lblidtecnico.Text);
-            
+                lista3 = rpn.listarRep3(lblidtecnico.Text);
+                lista4 = rpn.listarRep4(lblidtecnico.Text);
+            }
         }
     }
 }

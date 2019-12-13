@@ -14,21 +14,30 @@ namespace TP3_LACIOPPA
         double acum;
         double acumTotal;
         double ManoObra;
+        string validacion1 = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            acum = Convert.ToDouble(Session["AcumRepuesto"]);
-            acumTotal = Convert.ToDouble(Session["PresupuestoTotal"]);
-            btnFinalizarOrden.Enabled = false;
-            btnAgregarRepuesto.Enabled = false;
-            lblVerificaRepuesto.Visible = false;
-
-
-            if (!IsPostBack)
+            validacion1 = (string)Session["UsuarioTecnico"];
+            if (validacion1 == null)
             {
-                Session["ListaRepuestos"] = null;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('PRIMERO LOGUEATE');window.location ='login.aspx';", true);
+            }
+            else
+            {
+                acum = Convert.ToDouble(Session["AcumRepuesto"]);
+                acumTotal = Convert.ToDouble(Session["PresupuestoTotal"]);
                 btnFinalizarOrden.Enabled = false;
                 btnAgregarRepuesto.Enabled = false;
                 lblVerificaRepuesto.Visible = false;
+
+
+                if (!IsPostBack)
+                {
+                    Session["ListaRepuestos"] = null;
+                    btnFinalizarOrden.Enabled = false;
+                    btnAgregarRepuesto.Enabled = false;
+                    lblVerificaRepuesto.Visible = false;
+                }
             }
         }
         public List<Reparaciones> lista { get; set; }

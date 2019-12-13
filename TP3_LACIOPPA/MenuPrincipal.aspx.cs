@@ -11,23 +11,32 @@ namespace TP3_LACIOPPA
 {
     public partial class MenuPrincipal : System.Web.UI.Page
     {
+        string validacion1 = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["PresupuestoTotal"] = 0;
-            Session["AcumRepuesto"] = 0;
-            lblPerfilTecnico.Visible = false;
-            lblPerfilTecnico.Text = (string)Session["PerfilTecnico"].ToString();
-            lblUser.Text = (string)Session["UsuarioTecnico"];
-            if (Convert.ToInt32(lblPerfilTecnico.Text) == 2)
+            validacion1 = (string)Session["UsuarioTecnico"];
+            if (validacion1 == null)
             {
-                btnTec.Disabled = true;
-                lstReparaciones.Visible = false;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('PRIMERO LOGUEATE');window.location ='login.aspx';", true);
             }
-            if (Convert.ToInt32(lblPerfilTecnico.Text) == 3)
+            else
             {
-                btnTec.Disabled = true;
-                lstReparaciones.Visible = false;
-                btnRepuestos.Disabled = true;
+                Session["PresupuestoTotal"] = 0;
+                Session["AcumRepuesto"] = 0;
+                lblPerfilTecnico.Visible = false;
+                lblPerfilTecnico.Text = (string)Session["PerfilTecnico"].ToString();
+                lblUser.Text = (string)Session["UsuarioTecnico"];
+                if (Convert.ToInt32(lblPerfilTecnico.Text) == 2)
+                {
+                    btnTec.Disabled = true;
+                    lstReparaciones.Visible = false;
+                }
+                if (Convert.ToInt32(lblPerfilTecnico.Text) == 3)
+                {
+                    btnTec.Disabled = true;
+                    lstReparaciones.Visible = false;
+                    btnRepuestos.Disabled = true;
+                }
             }
         }
     }

@@ -12,11 +12,12 @@
     <h5 class="card-title">INGRESE SUS CREDENCIALES</h5>
     <asp:Label Text="USUARIO:" runat="server" />
     <center>
-<asp:TextBox ID="txtUsuario" runat="server" class="form-control" Width="250px"></asp:TextBox>
+     <asp:TextBox ID="txtUsuario" runat="server" class="form-control" Width="250px"></asp:TextBox>
     </center>
     <br />
     <asp:Label Text="CONTRASEÑA: " runat="server" />
       <center>
+            
           <asp:TextBox ID="txtPass" runat="server" class="form-control" TextMode="Password" Width="250px"></asp:TextBox>
       </center>
     <br />

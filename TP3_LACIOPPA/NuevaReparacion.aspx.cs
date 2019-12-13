@@ -11,36 +11,42 @@ namespace TP3_LACIOPPA
 {
     public partial class NuevaReparacion : System.Web.UI.Page
     {
-
+        string validacion1 = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Reparaciones rep = new Reparaciones();
-            ReparacionesNegocio repn = new ReparacionesNegocio();
-            lblNumeroOrden.Text = repn.BuscarOrden().ToString();
-            lblperfiltec.Text = (string)Session["PerfilTecnico"].ToString();
-            txtMarca.Enabled = false;
-            txtModelo.Enabled = false;
-            lblEquipo.Visible = false;
-            if(Convert.ToInt32(lblperfiltec.Text) != 1)
+            validacion1 = (string)Session["UsuarioTecnico"];
+            if (validacion1 == null)
             {
-
-                dwTecnico.Visible = false;
-                lblusuarioTec.Text = (string)Session["UsuarioTecnico"].ToString();
-                lblIDTec.Text = (string)Session["IDTecnico"].ToString();
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('PRIMERO LOGUEATE');window.location ='login.aspx';", true);
             }
-
-            if (!IsPostBack)
+            else
             {
-                TecnicoNegocio negocio = new TecnicoNegocio();
-                dwTecnico.DataTextField = "Usuario";
-                dwTecnico.DataValueField = "id";
-                dwTecnico.DataSource = negocio.listarUsers();
-                dwTecnico.DataBind();
- 
+                Reparaciones rep = new Reparaciones();
+                ReparacionesNegocio repn = new ReparacionesNegocio();
+                lblNumeroOrden.Text = repn.BuscarOrden().ToString();
+                lblperfiltec.Text = (string)Session["PerfilTecnico"].ToString();
+                txtMarca.Enabled = false;
+                txtModelo.Enabled = false;
+                lblEquipo.Visible = false;
+                if (Convert.ToInt32(lblperfiltec.Text) != 1)
+                {
+
+                    dwTecnico.Visible = false;
+                    lblusuarioTec.Text = (string)Session["UsuarioTecnico"].ToString();
+                    lblIDTec.Text = (string)Session["IDTecnico"].ToString();
+                }
+
+                if (!IsPostBack)
+                {
+                    TecnicoNegocio negocio = new TecnicoNegocio();
+                    dwTecnico.DataTextField = "Usuario";
+                    dwTecnico.DataValueField = "id";
+                    dwTecnico.DataSource = negocio.listarUsers();
+                    dwTecnico.DataBind();
+
+                }
+
             }
-
-
-
 
         }
 
@@ -84,6 +90,10 @@ namespace TP3_LACIOPPA
         public Equipos sn;
         protected void btnCargarReparacion_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtNumeroSerie.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO CARGO/BUSCO UN EQUIPO PARA REPARAR');window.location = 'NuevaReparacion.aspx';", true);
+            }
             try
             {
                 Reparaciones re = new Reparaciones();
@@ -130,6 +140,7 @@ namespace TP3_LACIOPPA
                     re.tecnico = new Tecnicos();
                     re.tecnico.ID = Convert.ToInt32(dwTecnico.SelectedItem.Value);
                 }
+               
 
                 ren.NuevaReparacion(re);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NUEVA REPARACION CONFIRMADA');window.location = 'MenuPrincipal.aspx';", true);              

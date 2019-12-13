@@ -12,8 +12,14 @@ namespace TP3_LACIOPPA
 {
     public partial class ModificarCliente : System.Web.UI.Page
     {
+        string validacion1 = null;
         protected void Page_Load(object sender, EventArgs e)
         {
+            validacion1 = (string)Session["UsuarioTecnico"];
+            if (validacion1 == null)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('PRIMERO LOGUEATE');window.location ='login.aspx';", true);
+            }
             btnModificarCliente.Enabled = false;
         }
 

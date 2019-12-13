@@ -11,16 +11,32 @@ namespace TP3_LACIOPPA
 {
     public partial class ModificarRepuestos : System.Web.UI.Page
     {
+        int validacion = 0;
+        string validacion1 = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            validacion1 = (string)Session["UsuarioTecnico"];
+            if (validacion1 == null)
             {
-                CategoriaRepuestosNegocios negocio = new CategoriaRepuestosNegocios();
-                dwCategorias.DataTextField = "nombre";
-                dwCategorias.DataValueField = "id";
-                dwCategorias.DataSource = negocio.listarCategorias();
-                dwCategorias.DataBind();
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('PRIMERO LOGUEATE');window.location ='login.aspx';", true);
             }
+            else
+            {
+                validacion = (int)Session["PerfilTecnico"];
+                if (validacion == 3)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('NO TIENE PERMISO');window.location ='MenuPrincipal.aspx';", true);
+                }
+                if (!IsPostBack)
+                {
+                    CategoriaRepuestosNegocios negocio = new CategoriaRepuestosNegocios();
+                    dwCategorias.DataTextField = "nombre";
+                    dwCategorias.DataValueField = "id";
+                    dwCategorias.DataSource = negocio.listarCategorias();
+                    dwCategorias.DataBind();
+                }
+            }
+           
         }
 
         protected void btnBuscarRepuesto_Click(object sender, EventArgs e)
