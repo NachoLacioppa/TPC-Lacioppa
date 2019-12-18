@@ -143,7 +143,9 @@ namespace TP3_LACIOPPA
                     rep.id = Convert.ToInt32(txtIDReparacion.Text);
                     rp.id = Convert.ToInt32(txtIDRepuesto.Text);
                     repn.Repuestos_x_reparaciones(rep, rp);
+                   
                 }
+
             }
 
         
@@ -179,14 +181,16 @@ namespace TP3_LACIOPPA
 
         protected void btnFinalizarOrden_Click(object sender, EventArgs e)
         {
-            Reparaciones rp = new Reparaciones();
-            ReparacionesNegocio rpn = new ReparacionesNegocio();
+            Reparaciones rep = new Reparaciones();
+            ReparacionesNegocio repn = new ReparacionesNegocio();
 
-            rp.id = Convert.ToInt32(txtIDReparacion.Text);
-            rp.informe = txtInforme.Text;
-            rp.presupuesto = Convert.ToSingle(txtPrecioTotal.Text);
 
-            rpn.FinalizarReparacion(rp);
+            rep.id = Convert.ToInt32(txtIDReparacion.Text);
+            rep.informe = txtInforme.Text;
+            rep.presupuesto = Convert.ToSingle(txtPrecioTotal.Text);
+
+
+            repn.FinalizarReparacion(rep);
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('REPARACION FINALIZADA');window.location ='MenuPrincipal.aspx';", true);
         }
     }

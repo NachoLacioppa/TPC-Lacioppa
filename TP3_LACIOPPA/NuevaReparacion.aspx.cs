@@ -28,6 +28,7 @@ namespace TP3_LACIOPPA
                 txtMarca.Enabled = false;
                 txtModelo.Enabled = false;
                 lblEquipo.Visible = false;
+                btnHabilitaSN.Visible = false;
                 if (Convert.ToInt32(lblperfiltec.Text) != 1)
                 {
 
@@ -82,6 +83,8 @@ namespace TP3_LACIOPPA
             }
             else
             {
+                btnHabilitaSN.Visible = true;
+                txtNumeroSerie.Enabled = false;
                 txtMarca.Text = eq.marca;
                 txtModelo.Text = eq.modelo;
             }
@@ -150,6 +153,11 @@ namespace TP3_LACIOPPA
             {
                 throw ex;
             }
+        }
+
+        protected void btnHabilitaSN_Click(object sender, EventArgs e)
+        {
+            txtNumeroSerie.Enabled = true;
         }
     }
 }

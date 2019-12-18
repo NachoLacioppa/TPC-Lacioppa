@@ -105,13 +105,13 @@ namespace TP3_LACIOPPA
         protected global::System.Web.UI.WebControls.TextBox txtNumeroSerie;
 
         /// <summary>
-        /// Control btnBuscarEquipo.
+        /// Control btnHabilitaSN.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscarEquipo;
+        protected global::System.Web.UI.WebControls.Button btnHabilitaSN;
 
         /// <summary>
         /// Control lblEquipo.
@@ -121,6 +121,15 @@ namespace TP3_LACIOPPA
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEquipo;
+
+        /// <summary>
+        /// Control btnBuscarEquipo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBuscarEquipo;
 
         /// <summary>
         /// Control txtMarca.
