@@ -189,7 +189,7 @@ namespace NEGOCIO
             AccesoDatos datos = new AccesoDatos();
             //TIRO LA QUERY
             //datos.setearQuery("select codigo, nombre, cantidad, precio from repuestos where estado = 1");
-            datos.setearQuery("select id, nombre, precio from repuestos where estado = 1 and id = @auxid");
+            datos.setearQuery("select id, nombre, codigo, precio from repuestos where estado = 1 and id = @auxid");
             datos.agregarParametro("auxid", auxid);
             //EJECUTO EL LECTOR
             datos.ejecutarLector();
@@ -201,6 +201,7 @@ namespace NEGOCIO
                 aux = new Repuestos();
 
                 aux.id = Convert.ToInt32(datos.lector["id"]);
+                aux.codigo = datos.lector["codigo"].ToString();
                 aux.nombre = datos.lector["Nombre"].ToString();
                 aux.precio = Convert.ToSingle(datos.lector["Precio"].ToString());
 
@@ -221,7 +222,7 @@ namespace NEGOCIO
             AccesoDatos datos = new AccesoDatos();
             //TIRO LA QUERY
             //datos.setearQuery("select codigo, nombre, cantidad, precio from repuestos where estado = 1");
-            datos.setearQuery("select repara.orden, repuxrepa.IDREPUESTO, repu.nombre, repu.precio from REPUESTOS_POR_REPARACIONES as repuxrepa inner join repuestos as repu on repuxrepa.IDREPUESTO = repu.id inner join REPARACIONES as repara on repuxrepa.IDREPARACIONES = repara.id where repara.id = @aux");
+            datos.setearQuery("select repara.orden, repuxrepa.IDREPUESTO, repu.codigo ,repu.nombre, repu.precio from REPUESTOS_POR_REPARACIONES as repuxrepa inner join repuestos as repu on repuxrepa.IDREPUESTO = repu.id inner join REPARACIONES as repara on repuxrepa.IDREPARACIONES = repara.id where repara.id = @aux");
             datos.agregarParametro("@aux", auxid);
             //EJECUTO EL LECTOR
             datos.ejecutarLector();
@@ -235,6 +236,7 @@ namespace NEGOCIO
 
                 aux1.orden = Convert.ToInt64(datos.lector["orden"]);
                 aux.id = Convert.ToInt32(datos.lector["idrepuesto"]);
+                aux.codigo = datos.lector["Codigo"].ToString();
                 aux.nombre = datos.lector["nombre"].ToString();
                 aux.precio = Convert.ToSingle(datos.lector["precio"]);
 

@@ -148,7 +148,6 @@ namespace TP3_LACIOPPA
                 dwRepuestosUsados.DataSource = lista;
                 dwRepuestosUsados.DataBind();
 
-                //dwRepuestosUsados.Columns[0].Visible = false;
 
             }
             else if(rep_reparacion == null && rep_finalizado == null)
