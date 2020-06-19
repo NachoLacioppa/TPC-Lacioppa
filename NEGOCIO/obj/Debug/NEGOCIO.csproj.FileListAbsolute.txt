@@ -21,3 +21,12 @@ C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\obj\De
 C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.csproj.CopyComplete
 C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.dll
 C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.pdb
+E:\REPOS GRALES\TPC-Lacioppa\NEGOCIO\bin\Debug\NEGOCIO.dll
+E:\REPOS GRALES\TPC-Lacioppa\NEGOCIO\bin\Debug\NEGOCIO.pdb
+E:\REPOS GRALES\TPC-Lacioppa\NEGOCIO\bin\Debug\DOMINIO.dll
+E:\REPOS GRALES\TPC-Lacioppa\NEGOCIO\bin\Debug\DOMINIO.pdb
+E:\REPOS GRALES\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.csprojAssemblyReference.cache
+E:\REPOS GRALES\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.csproj.CoreCompileInputs.cache
+E:\REPOS GRALES\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.csproj.CopyComplete
+E:\REPOS GRALES\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.dll
+E:\REPOS GRALES\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.pdb

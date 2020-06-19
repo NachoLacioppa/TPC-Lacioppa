@@ -20,7 +20,7 @@ namespace NEGOCIO
             //INSTANCIO LA CONECCION A LA BASE
             AccesoDatos datos = new AccesoDatos();
             //TIRO LA QUERY
-            datos.setearQuery("select nombre, apellido, dni, direccion, localidad, telefono, mail from Clientes where estado = 1");
+            datos.setearQuery("select * from VW_Buscar_Clientes");
             //EJECUTO EL LECTOR
             datos.ejecutarLector();
 
@@ -49,8 +49,16 @@ namespace NEGOCIO
         {
 
             AccesoDatos data = new AccesoDatos();
-            data.prepareStatement("" +
-                "INSERT INTO Clientes VALUES ('" + aux.nombre + "', '" + aux.apellido + "', '" + aux.dni + "', '" + aux.direccion + "', '" + aux.localidad + "', '" + aux.telefono + "', '" + aux.mail + "', 1)");
+            data.agregarParametro("@nombre", aux.nombre);
+            data.agregarParametro("@apellido", aux.apellido);
+            data.agregarParametro("@dni", aux.dni);
+            data.agregarParametro("@direccion", aux.direccion);
+            data.agregarParametro("@localidad", aux.localidad);
+            data.agregarParametro("@telefono", aux.telefono);
+            data.agregarParametro("@mail", aux.mail);
+            data.agregarParametro("@estado", 1);
+            data.setear_SP("SP_InsertarCliente");
+            //data.prepareStatement("" + "INSERT INTO Clientes VALUES ('" + aux.nombre + "', '" + aux.apellido + "', '" + aux.dni + "', '" + aux.direccion + "', '" + aux.localidad + "', '" + aux.telefono + "', '" + aux.mail + "', 1)");
             data.ejecutarAccion();
             data.cerrarConexion();
 
@@ -79,8 +87,9 @@ namespace NEGOCIO
             AccesoDatos datos = new AccesoDatos();
             Clientes cli = new Clientes();
 
-            datos.setearQuery("Select id, dni, estado from Clientes where dni = @dni and estado = 1");
-            datos.agregarParametro("dni", dnicliente);
+            //datos.setearQuery("Select id, dni, estado from Clientes where dni = @dni and estado = 1");
+            datos.agregarParametro("@dni", dnicliente);
+            datos.setear_SP("SP_BuscarDNI");
             datos.ejecutarLector();
             if (datos.lector.Read())
             {
@@ -130,7 +139,7 @@ namespace NEGOCIO
         public bool ModificarCliente(Clientes aux)
         {
             AccesoDatos data = new AccesoDatos();
-            data.prepareStatement("update clientes set nombre = @nombre, apellido = @apellido, dni = @dni, direccion = @direccion, localidad = @localidad, telefono = @telefono, mail = @mail where dni = '" + aux.dni + "'");
+            //data.prepareStatement("update clientes set nombre = @nombre, apellido = @apellido, dni = @dni, direccion = @direccion, localidad = @localidad, telefono = @telefono, mail = @mail where dni = '" + aux.dni + "'");
             data.agregarParametro("@nombre",aux.nombre);
             data.agregarParametro("@apellido",aux.apellido);
             data.agregarParametro("@dni",aux.dni);
@@ -138,6 +147,8 @@ namespace NEGOCIO
             data.agregarParametro("@localidad",aux.localidad);
             data.agregarParametro("@telefono",aux.telefono);
             data.agregarParametro("@mail",aux.mail);
+            data.agregarParametro("@estado", 1);
+            data.setear_SP("SP_ModificarCliente");
             data.ejecutarAccion();
             data.cerrarConexion();
 
