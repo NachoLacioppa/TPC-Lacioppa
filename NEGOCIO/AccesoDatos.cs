@@ -65,10 +65,18 @@ namespace NEGOCIO
             conexion.Open();
             comando.ExecuteNonQuery();
         }
-        
-        
-        
-       
+
+        public void setear_SP(string consulta)
+        {
+            SqlCommand sql = new SqlCommand(consulta, conexion);
+            sql.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.CommandText = consulta;
+
+        }
+
+
+
     }
     //public DataSet Consulta(string palabra)
     //{

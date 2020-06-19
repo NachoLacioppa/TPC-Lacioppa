@@ -15,3 +15,9 @@ C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\DOMINIO\obj\De
 C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\DOMINIO\obj\Debug\DOMINIO.csproj.CoreCompileInputs.cache
 C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\DOMINIO\obj\Debug\DOMINIO.dll
 C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\DOMINIO\obj\Debug\DOMINIO.pdb
+E:\REPOS GRALES\TPC-Lacioppa\DOMINIO\bin\Debug\DOMINIO.dll
+E:\REPOS GRALES\TPC-Lacioppa\DOMINIO\bin\Debug\DOMINIO.pdb
+E:\REPOS GRALES\TPC-Lacioppa\DOMINIO\obj\Debug\DOMINIO.csprojAssemblyReference.cache
+E:\REPOS GRALES\TPC-Lacioppa\DOMINIO\obj\Debug\DOMINIO.csproj.CoreCompileInputs.cache
+E:\REPOS GRALES\TPC-Lacioppa\DOMINIO\obj\Debug\DOMINIO.dll
+E:\REPOS GRALES\TPC-Lacioppa\DOMINIO\obj\Debug\DOMINIO.pdb

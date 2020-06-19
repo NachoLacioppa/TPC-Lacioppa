@@ -1,0 +1,55 @@
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll.config
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\bin\TP3_LACIOPPA.pdb
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\bin\DOMINIO.dll
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\bin\NEGOCIO.dll
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\bin\DOMINIO.pdb
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\bin\NEGOCIO.pdb
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.dll
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll.config
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\TP3_LACIOPPA.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\DOMINIO.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\NEGOCIO.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\DOMINIO.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\NEGOCIO.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csprojAssemblyReference.cache
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csproj.CoreCompileInputs.cache
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csproj.CopyComplete
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.pdb
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll.config
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\TP3_LACIOPPA.pdb
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\DOMINIO.dll
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\NEGOCIO.dll
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\DOMINIO.pdb
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\NEGOCIO.pdb
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csprojAssemblyReference.cache
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csproj.CoreCompileInputs.cache
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csproj.CopyComplete
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.dll
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.pdb
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll.config
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\TP3_LACIOPPA.pdb
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\DOMINIO.dll
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\NEGOCIO.dll
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\DOMINIO.pdb
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\NEGOCIO.pdb
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csprojAssemblyReference.cache
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csproj.CoreCompileInputs.cache
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\obj\Debug\TPC_LACIOPPA.csproj.CopyComplete
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.dll
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.pdb

@@ -1,0 +1,41 @@
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\bin\Debug\NEGOCIO.dll
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\bin\Debug\NEGOCIO.pdb
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.dll
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.pdb
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\NEGOCIO\bin\Debug\NEGOCIO.dll
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\NEGOCIO\bin\Debug\NEGOCIO.pdb
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\NEGOCIO\bin\Debug\DOMINIO.dll
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\NEGOCIO\bin\Debug\DOMINIO.pdb
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.dll
+C:\Users\LENOVO\Desktop\FACULTAD\PROGRAMACION III\TPC_LACIOPPA\NEGOCIO\obj\Debug\NEGOCIO.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\bin\Debug\NEGOCIO.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\bin\Debug\NEGOCIO.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\bin\Debug\DOMINIO.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\bin\Debug\DOMINIO.pdb
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.csprojAssemblyReference.cache
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.csproj.CoreCompileInputs.cache
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.csproj.CopyComplete
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.dll
+C:\Users\Ignacio\Desktop\FACULTAD 2019\PROG III 2019\TPC-Lacioppa\NEGOCIO\obj\Debug\NEGOCIO.pdb
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\bin\Debug\NEGOCIO.dll
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\bin\Debug\NEGOCIO.pdb
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\bin\Debug\DOMINIO.dll
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\bin\Debug\DOMINIO.pdb
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\obj\Debug\NEGOCIO.csprojAssemblyReference.cache
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\obj\Debug\NEGOCIO.csproj.CoreCompileInputs.cache
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\obj\Debug\NEGOCIO.csproj.CopyComplete
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\obj\Debug\NEGOCIO.dll
+C:\Users\Nacho\Desktop\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\obj\Debug\NEGOCIO.pdb
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\bin\Debug\NEGOCIO.dll
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\bin\Debug\NEGOCIO.pdb
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\bin\Debug\DOMINIO.dll
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\bin\Debug\DOMINIO.pdb
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\obj\Debug\NEGOCIO.csprojAssemblyReference.cache
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\obj\Debug\NEGOCIO.csproj.CoreCompileInputs.cache
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\obj\Debug\NEGOCIO.csproj.CopyComplete
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\obj\Debug\NEGOCIO.dll
+E:\SISTEMA TALLER WEB\TPC-Lacioppa-master\TPC-Lacioppa-master\NEGOCIO\obj\Debug\NEGOCIO.pdb

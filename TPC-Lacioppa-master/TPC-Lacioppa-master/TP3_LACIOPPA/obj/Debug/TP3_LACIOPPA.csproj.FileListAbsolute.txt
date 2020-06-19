@@ -1,0 +1,9 @@
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll.config
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\TP3_LACIOPPA\bin\TP3_LACIOPPA.dll
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\TP3_LACIOPPA\bin\TP3_LACIOPPA.pdb
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\TP3_LACIOPPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.dll
+C:\Users\Administrador\Desktop\TP3_LACIOPPA\TP3_LACIOPPA\TP3_LACIOPPA\obj\Debug\TP3_LACIOPPA.pdb
